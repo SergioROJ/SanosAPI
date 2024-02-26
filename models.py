@@ -39,7 +39,7 @@ class Media(BaseModel):
 class Image(Media):
     pass  # Aquí puedes añadir campos específicos de la imagen si los hay
 
-class Voice(Media):
+class Audio(Media):
     pass  # Aquí puedes añadir campos específicos de la voz si los hay
 
 class Video(Media):
@@ -55,7 +55,7 @@ class Message(BaseModel):
     type: str
     text: Optional[Text] = None
     image: Optional[Image] = None
-    voice: Optional[Voice] = None
+    audio: Optional[Audio] = None
     video: Optional[Video] = None
 
 class Metadata(BaseModel):

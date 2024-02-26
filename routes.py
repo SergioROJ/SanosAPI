@@ -45,13 +45,13 @@ async def get_media_url(media_id: str) -> str:
             logging.error("Failed to obtain media URL, status code: %d", response.status_code)
             raise HTTPException(status_code=response.status_code, detail="Failed to obtain media URL")
         
-async def save_media(media_url: str, media_type: str, media_id: str):
+async def save_media(media_url: str, media_type: str, media_id: str, mime_type: str):
     logging.info("Saving media, media_id: %s, media_type: %s", media_id, media_type)
     headers = {
         "Authorization": f"Bearer {Config.USER_ACCESS_TOKEN}"
     }
     if media_url:
-        file_path = f"./media/{media_type}/{media_id}.jpg"
+        file_path = f"./media/{media_type}/{media_id}.{mime_type}"
         logging.info("Media is downloading at: %s", file_path)
 
         async with AsyncClient() as client:
@@ -66,11 +66,11 @@ async def save_media(media_url: str, media_type: str, media_id: str):
         logging.warning("Failed to save media for media_id: %s", media_id)
     return None
 
-async def handle_image_message(media_id: str, media_type: str):
+async def handle_image_message(media_id: str, media_type: str, mime_type: str):
     logging.info(f"Processing image message: {media_id}")
     media_url = await get_media_url(media_id)  # Asegúrate de pasar el access_token aquí
     if media_url:
-        await save_media(media_url, media_type, media_id)
+        await save_media(media_url, media_type, media_id, mime_type)
     else:
         logging.error(f"Failed to process image message: {media_id}")
 
@@ -87,9 +87,20 @@ async def receive_message(request: IncomingMessage):
                     # Procesar mensaje de imagen
                     logging.info(f"Processing image message: {message.image.id}")
                     media_id = message.image.id
-                    tasks.append(handle_image_message(media_id, "pictures"))
+                    tasks.append(handle_image_message(media_id, "pictures", message.image.mime_type.split("/")[-1]))
                 elif message.type == 'text':
+                    #procesar mensaje de texto
                     logging.info(f"El mensaje recibido es: {message.text.body}")
+                elif message.type == 'audio':
+                    #Procesar mensaje nota de voz
+                    logging.info(f"Processing audio message: {message.audio.id}")
+                    media_id = message.audio.id
+                    tasks.append(handle_image_message(media_id, "voice", message.audio.mime_type.split("/")[-1].split(";")[0]))
+                elif message.type == 'video':
+                    #Procesar mensaje de video
+                    logging.info(f"Processing image message: {message.video.id}")
+                    media_id = message.video.id
+                    tasks.append(handle_image_message(media_id, "video", message.video.mime_type.split("/")[-1]))
                 else:
                     logging.info(f"Unhandled message type: {message.type}")
 
