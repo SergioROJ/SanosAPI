@@ -9,6 +9,7 @@ from models import SendMessageRequest, IncomingMessage, Message
 from strategies import strategies
 from config import Config
 from httpx import AsyncClient
+from typing import Optional
 
 router = APIRouter()
 
@@ -45,13 +46,16 @@ async def get_media_url(media_id: str) -> str:
             logging.error("Failed to obtain media URL, status code: %d", response.status_code)
             raise HTTPException(status_code=response.status_code, detail="Failed to obtain media URL")
         
-async def save_media(media_url: str, media_type: str, media_id: str, mime_type: str):
+async def save_media(media_url: str, media_type: str, media_id: str, mime_type: str, filename: Optional[str] = None):
     logging.info("Saving media, media_id: %s, media_type: %s", media_id, media_type)
     headers = {
         "Authorization": f"Bearer {Config.USER_ACCESS_TOKEN}"
     }
     if media_url:
-        file_path = f"./media/{media_type}/{media_id}.{mime_type}"
+        if media_type == 'document':
+            file_path = f"./media/{media_type}/{filename}"
+        else:
+            file_path = f"./media/{media_type}/{media_id}.{mime_type}"
         logging.info("Media is downloading at: %s", file_path)
 
         async with AsyncClient() as client:
@@ -66,11 +70,13 @@ async def save_media(media_url: str, media_type: str, media_id: str, mime_type: 
         logging.warning("Failed to save media for media_id: %s", media_id)
     return None
 
-async def handle_image_message(media_id: str, media_type: str, mime_type: str):
+async def handle_image_message(media_id: str, media_type: str, mime_type: str, filename: Optional[str] = None):
     logging.info(f"Processing image message: {media_id}")
     media_url = await get_media_url(media_id)  # Asegúrate de pasar el access_token aquí
-    if media_url:
+    if media_url and media_type != 'document':
         await save_media(media_url, media_type, media_id, mime_type)
+    elif media_url and media_type == 'document':
+        await save_media(media_url, media_type, media_id, mime_type, filename)
     else:
         logging.error(f"Failed to process image message: {media_id}")
 
@@ -102,6 +108,10 @@ async def receive_message(request: IncomingMessage):
                     logging.info(f"Processing image message: {message.video.id}")
                     media_id = message.video.id
                     tasks.append(handle_image_message(media_id, "video", message.video.mime_type.split("/")[-1]))
+                elif message.type == 'document':
+                    logging.info(f"Processing document message: {message.document.id}")
+                    media_id = message.document.id
+                    tasks.append(handle_image_message(media_id, "document", message.document.filename.split(".")[-1], message.document.filename))
                 else:
                     logging.info(f"Unhandled message type: {message.type}")
 

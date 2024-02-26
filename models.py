@@ -45,6 +45,9 @@ class Audio(Media):
 class Video(Media):
     pass  # Aquí puedes añadir campos específicos del video si los hay
 
+class Document(Media):
+    filename: str
+
 class Text(BaseModel):
     body: Optional[str] = None
 
@@ -57,6 +60,7 @@ class Message(BaseModel):
     image: Optional[Image] = None
     audio: Optional[Audio] = None
     video: Optional[Video] = None
+    document: Optional[Document] = None
 
 class Metadata(BaseModel):
     display_phone_number: str

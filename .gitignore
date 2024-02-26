@@ -6,4 +6,5 @@ conversiones/
 media/pictures/**
 media/voices/**
 media/videos/**
+media/document/**
 !.gitkeep
