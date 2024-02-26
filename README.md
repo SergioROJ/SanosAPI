@@ -6,13 +6,13 @@ This project integrates WhatsApp messaging with a FastAPI application, enabling 
 ## Setup
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourgithubusername/yourrepositoryname.git](https://github.com/SergioROJ/SanosAPI)
+   git clone https://github.com/SergioROJ/SanosAPI
 
 2. **Instalar dependencias**
    ```bash
   pip install -r requirements.txt
 
-3. **Variables de entorno**
+4. **Variables de entorno**
   Es necesario que las siguientes variables de entorno hayan sido correctamente manejadas dentro del proyecto:
 
    ```bash
