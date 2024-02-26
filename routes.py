@@ -71,7 +71,7 @@ async def save_media(media_url: str, media_type: str, media_id: str, mime_type: 
     return None
 
 async def handle_image_message(media_id: str, media_type: str, mime_type: str, filename: Optional[str] = None):
-    logging.info(f"Processing image message: {media_id}")
+    logging.info(f"Processing media message: {media_id}")
     media_url = await get_media_url(media_id)  # Asegúrate de pasar el access_token aquí
     if media_url and media_type != 'document':
         await save_media(media_url, media_type, media_id, mime_type)
