@@ -35,6 +35,7 @@ class Media(BaseModel):
     mime_type: str
     sha256: str
     id: str
+    caption: str
 
 class Image(Media):
     pass  # Aquí puedes añadir campos específicos de la imagen si los hay

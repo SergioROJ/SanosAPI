@@ -95,6 +95,8 @@ async def receive_message(request: IncomingMessage):
                     logging.info(f"Processing image message: {message.image.id}")
                     media_id = message.image.id
                     tasks.append(handle_image_message(media_id, "pictures", message.image.mime_type.split("/")[-1]))
+                    if message.image.caption:
+                        logging.info("La imagencontiene el mensaje adjunto {message.image.caption}")
                 elif message.type == 'text':
                     #procesar mensaje de texto
                     logging.info(f"El mensaje recibido es: {message.text.body}")
@@ -103,15 +105,22 @@ async def receive_message(request: IncomingMessage):
                     logging.info(f"Processing audio message: {message.audio.id}")
                     media_id = message.audio.id
                     tasks.append(handle_image_message(media_id, "voice", message.audio.mime_type.split("/")[-1].split(";")[0]))
+                    if message.audio.caption:
+                        logging.info("La nota de voz contiene el mensaje adjunto {message.audio.caption}")
                 elif message.type == 'video':
                     #Procesar mensaje de video
                     logging.info(f"Processing image message: {message.video.id}")
                     media_id = message.video.id
                     tasks.append(handle_image_message(media_id, "video", message.video.mime_type.split("/")[-1]))
+                    if message.video.caption:
+                        logging.info("El video contiene el mensaje adjunto {message.video.caption}")
                 elif message.type == 'document':
+                    #Procesar mensaje de documento
                     logging.info(f"Processing document message: {message.document.id}")
                     media_id = message.document.id
                     tasks.append(handle_image_message(media_id, "document", message.document.filename.split(".")[-1], message.document.filename))
+                    if message.video.caption:
+                        logging.info("El video ontiene el mensaje adjunto {message.document.caption}")
                 else:
                     logging.info(f"Unhandled message type: {message.type}")
 
