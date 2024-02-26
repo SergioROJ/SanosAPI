@@ -76,7 +76,8 @@ async def handle_image_message(media_id: str, media_type: str, mime_type: str):
 
 @router.post("/webhook")
 async def receive_message(request: IncomingMessage):
-    logging.info("Received event: %s", request.dict())
+    request_data = request.model_dump_json()
+    logging.info("Received event: %s", request_data)
     
     tasks = []
     for entry in request.entry:
