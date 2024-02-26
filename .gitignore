@@ -2,7 +2,10 @@
 .env
 bp/
 conversiones/
-# Ignorar todo dentro de las subcarpetas
-media/pictures/*
+# Ignorar todo dentro de las subcarpetas pero permitir .gitkeep
+media/pictures/* 
+!media/pictures/.gitkeep
 media/voices/*
+!media/voices/.gitkeep
 media/videos/*
+!media/videos/.gitkeep
