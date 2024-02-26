@@ -1,0 +1,8 @@
+# .gitignore
+.env
+bp/
+conversiones/
+# Ignorar todo dentro de las subcarpetas
+media/pictures/*
+media/voices/*
+media/videos/*
