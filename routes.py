@@ -5,129 +5,118 @@ import logging
 import aiofiles
 from fastapi import APIRouter, HTTPException, status
 from fastapi.responses import JSONResponse
-from models import SendMessageRequest, IncomingMessage, Message
-from strategies import strategies
+from models import SendMessageRequest, IncomingMessage
 from config import Config
 from httpx import AsyncClient
 from typing import Optional
 
 router = APIRouter()
 
+# Asegúrate de que esta función se coloca antes de su primera utilización
+def get_headers() -> dict:
+    """
+    Genera y retorna un diccionario de encabezados para usar en solicitudes HTTP.
+
+    Retorna:
+        dict: Un diccionario de encabezados.
+    """
+    return {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {Config.USER_ACCESS_TOKEN}"
+    }
+
 @router.post("/send-message")
 async def send_message(message_request: SendMessageRequest):
-    logging.info("Sending message to recipient_number: %s", message_request.recipient_number)
+    logging.info(f"Sending message to recipient_number: {message_request.recipient_number}")
     async with AsyncClient() as client:
         response = await client.post(
             url=f"https://graph.facebook.com/{Config.VERSION}/{Config.PHONE_NUMBER_ID}/messages",
-            headers={"Authorization": f"Bearer {Config.USER_ACCESS_TOKEN}", "Content-Type": "application/json"},
+            headers=get_headers(),
             json={"messaging_product": "whatsapp", "to": message_request.recipient_number, "type": "text", "text": {"body": message_request.message}},
         )
         if response.status_code == 200:
             logging.info("Message sent successfully")
             return {"status": "success", "message": "Message sent"}
         else:
-            logging.error("Failed to send message, status code: %d", response.status_code)
+            logging.error(f"Failed to send message, status code: {response.status_code}")
             raise HTTPException(status_code=response.status_code, detail="Failed to send message")
 
-async def get_media_url(media_id: str) -> str:
-    logging.info("Fetching media URL for media_id: %s", media_id)
-    url = f"https://graph.facebook.com/v18.0/{media_id}"
-    headers = {
-        "Authorization": f"Bearer {Config.USER_ACCESS_TOKEN}"
-    }
+async def get_media_url(media_id: str) -> Optional[str]:
+    logging.info(f"Fetching media URL for media_id: {media_id}")
     async with AsyncClient() as client:
-        response = await client.get(url, headers=headers)
+        response = await client.get(f"https://graph.facebook.com/v18.0/{media_id}", headers=get_headers())
         if response.status_code == 200:
-            # Suponiendo que la respuesta incluya una URL directa al archivo multimedia
             logging.info("Media URL fetched successfully")
             media_url = response.json().get('url')
             return media_url
         else:
-            logging.error("Failed to obtain media URL, status code: %d", response.status_code)
-            raise HTTPException(status_code=response.status_code, detail="Failed to obtain media URL")
-        
-async def save_media(media_url: str, media_type: str, media_id: str, mime_type: str, filename: Optional[str] = None):
-    logging.info("Saving media, media_id: %s, media_type: %s", media_id, media_type)
-    headers = {
-        "Authorization": f"Bearer {Config.USER_ACCESS_TOKEN}"
-    }
-    if media_url:
-        if media_type == 'document':
-            file_path = f"./media/{media_type}/{filename}"
+            logging.error(f"Failed to obtain media URL, status code: {response.status_code}")
+            return None
+
+async def save_media(media_url: str, media_type: str, media_id: str, mime_type: str, filename: Optional[str] = None) -> Optional[str]:
+    logging.info(f"Saving media, media_id: {media_id}, media_type: {media_type}")
+    if not media_url:
+        logging.warning(f"No media URL provided for media_id: {media_id}")
+        return None
+
+    # Aquí ajustamos cómo manejar el mime_type para eliminar cualquier cosa después de ';'
+    # Esto asegura que solo se usa la parte relevante del mime_type para la extensión del archivo.
+    clean_mime_type = mime_type.split(';')[0]  # Solo conserva lo que está antes del ';'
+    extension = clean_mime_type.split('/')[-1]  # Obtiene la extensión después del '/'
+
+    # Usamos la extensión limpia para el nombre del archivo
+    file_path = f"./media/{media_type}/{filename or f'{media_id}.{extension}'}"
+
+    async with AsyncClient() as client:
+        response = await client.get(media_url, headers=get_headers())
+        if response.status_code == 200:
+            os.makedirs(os.path.dirname(file_path), exist_ok=True)
+            async with aiofiles.open(file_path, 'wb') as file:
+                await file.write(response.content)
+            logging.info(f"Media downloaded and saved at: {file_path}")
+            return file_path
         else:
-            file_path = f"./media/{media_type}/{media_id}.{mime_type}"
-        logging.info("Media is downloading at: %s", file_path)
-
-        async with AsyncClient() as client:
-            logging.info("Request is being made at: %s", media_url)
-            response = await client.get(media_url, headers=headers)
-            if response.status_code == 200:
-                os.makedirs(os.path.dirname(file_path), exist_ok=True)
-                async with aiofiles.open(file_path, 'wb') as file:
-                    await file.write(response.content)
-                return file_path
-    else:
-        logging.warning("Failed to save media for media_id: %s", media_id)
-    return None
-
-async def handle_image_message(media_id: str, media_type: str, mime_type: str, filename: Optional[str] = None):
+            logging.error(f"Failed to download media for media_id: {media_id}, status code: {response.status_code}")
+            return None
+        
+        
+async def handle_media_message(media_id: str, media_type: str, mime_type: str, filename: Optional[str] = None, caption: Optional[str] = None):
     logging.info(f"Processing media message: {media_id}")
-    media_url = await get_media_url(media_id)  # Asegúrate de pasar el access_token aquí
-    if media_url and media_type != 'document':
-        await save_media(media_url, media_type, media_id, mime_type)
-    elif media_url and media_type == 'document':
-        await save_media(media_url, media_type, media_id, mime_type, filename)
+    media_url = await get_media_url(media_id)
+    if media_url:
+        file_path = await save_media(media_url, media_type, media_id, mime_type, filename)
+        if file_path:
+            logging.info(f"Media saved successfully at {file_path}")
+        else:
+            logging.error(f"Failed to save media for media_id: {media_id}")
     else:
-        logging.error(f"Failed to process image message: {media_id}")
+        logging.error(f"Failed to fetch media URL for media_id: {media_id}")
+
+    if caption:
+        logging.info(f"Message contains caption: {caption}")
+
+async def process_message(message):
+    media_id = getattr(message, message.type).id if hasattr(message, message.type) else None
+    mime_type = getattr(message, message.type).mime_type.split("/")[-1] if hasattr(message, message.type) else None
+    filename = getattr(message, message.type).filename if hasattr(getattr(message, message.type, None), 'filename') else None
+    caption = getattr(message, message.type).caption if hasattr(getattr(message, message.type, None), 'caption') else None
+
+    if media_id:
+        await handle_media_message(media_id, message.type, mime_type, filename, caption)
 
 @router.post("/webhook")
 async def receive_message(request: IncomingMessage):
-    request_data = request.model_dump_json()
-    logging.info("Received event: %s", request_data)
-    
+    request_data = request.dict()  # Asegurarse de que 'IncomingMessage' tenga un método 'dict()' o usar una serialización adecuada
+    logging.info(f"Received event: {request_data}")
+
     tasks = []
     for entry in request.entry:
         for change in entry.changes:
-            # Asumiendo que todos los cambios son mensajes por ahora
-            for message in change.value.messages:  # Accediendo directamente a los mensajes
-                if message.type == 'image':
-                    # Procesar mensaje de imagen
-                    logging.info(f"Processing image message: {message.image.id}")
-                    media_id = message.image.id
-                    tasks.append(handle_image_message(media_id, "pictures", message.image.mime_type.split("/")[-1]))
-                    if message.image.caption:
-                        logging.info("La imagencontiene el mensaje adjunto {message.image.caption}")
-                elif message.type == 'text':
-                    #procesar mensaje de texto
-                    logging.info(f"El mensaje recibido es: {message.text.body}")
-                elif message.type == 'audio':
-                    #Procesar mensaje nota de voz
-                    logging.info(f"Processing audio message: {message.audio.id}")
-                    media_id = message.audio.id
-                    tasks.append(handle_image_message(media_id, "voice", message.audio.mime_type.split("/")[-1].split(";")[0]))
-                    if message.audio.caption:
-                        logging.info("La nota de voz contiene el mensaje adjunto {message.audio.caption}")
-                elif message.type == 'video':
-                    #Procesar mensaje de video
-                    logging.info(f"Processing image message: {message.video.id}")
-                    media_id = message.video.id
-                    tasks.append(handle_image_message(media_id, "video", message.video.mime_type.split("/")[-1]))
-                    if message.video.caption:
-                        logging.info("El video contiene el mensaje adjunto {message.video.caption}")
-                elif message.type == 'document':
-                    #Procesar mensaje de documento
-                    logging.info(f"Processing document message: {message.document.id}")
-                    media_id = message.document.id
-                    tasks.append(handle_image_message(media_id, "document", message.document.filename.split(".")[-1], message.document.filename))
-                    if message.video.caption:
-                        logging.info("El video ontiene el mensaje adjunto {message.document.caption}")
-                else:
-                    logging.info(f"Unhandled message type: {message.type}")
+            if change.value.messages:
+                for message in change.value.messages:
+                    tasks.append(process_message(message))
 
     if tasks:
         await asyncio.gather(*tasks)
         logging.info("All tasks processed successfully.")
-    else:
-        logging.info("No tasks to process.")
-
     return JSONResponse(content={"status": "success", "message": "Event processed successfully"}, status_code=status.HTTP_200_OK)

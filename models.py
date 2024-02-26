@@ -1,11 +1,8 @@
 from pydantic import BaseModel, Field
 from typing import List, Optional, Dict, Any
 
-# Modelos Pydantic
-from pydantic import BaseModel, Field
-from typing import List, Optional, Dict, Any
+# Revisión de los Modelos Pydantic
 
-# Modelos Pydantic
 class Profile(BaseModel):
     name: str
 
@@ -35,25 +32,25 @@ class Media(BaseModel):
     mime_type: str
     sha256: str
     id: str
-    caption: str
+    caption: Optional[str] = None  # Asegúrate de que este campo sea opcional si no siempre se proporciona
 
 class Image(Media):
-    pass  # Aquí puedes añadir campos específicos de la imagen si los hay
+    pass  # Sin cambios específicos requeridos
 
 class Audio(Media):
-    pass  # Aquí puedes añadir campos específicos de la voz si los hay
+    pass  # Sin cambios específicos requeridos
 
 class Video(Media):
-    pass  # Aquí puedes añadir campos específicos del video si los hay
+    pass  # Sin cambios específicos requeridos
 
 class Document(Media):
-    filename: str
+    filename: str  # Asegúrate de que este campo siempre se proporcione para documentos
 
 class Text(BaseModel):
     body: Optional[str] = None
 
 class Message(BaseModel):
-    from_: str = Field(..., alias='from')
+    from_: str = Field(..., alias='from')  # Asegúrate de que el alias se maneje correctamente
     id: str
     timestamp: int
     type: str

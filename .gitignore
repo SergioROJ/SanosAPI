@@ -3,8 +3,8 @@
 bp/
 conversiones/
 # Ignorar todo dentro de las subcarpetas de media, pero incluir las carpetas
-media/pictures/**
-media/voices/**
-media/videos/**
+media/image/**
+media/audio/**
+media/video/**
 media/document/**
 !.gitkeep
