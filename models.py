@@ -1,26 +1,39 @@
 from pydantic import BaseModel, Field
 from typing import List, Optional, Dict, Any
 
-# Revisión de los Modelos Pydantic
-
 class Profile(BaseModel):
+    """
+    Representa el perfil de un contacto, con su nombre.
+    """
     name: str
 
 class Contact(BaseModel):
+    """
+    Define un contacto, incluyendo su perfil y WhatsApp ID.
+    """
     profile: Profile
     wa_id: str
 
 class Conversation(BaseModel):
+    """
+    Información sobre una conversación, incluyendo su ID y datos opcionales de origen y expiración.
+    """
     id: str
     origin: Optional[Dict[str, Any]] = None
     expiration_timestamp: Optional[int] = None
 
 class Pricing(BaseModel):
+    """
+    Detalles sobre la facturación de un mensaje, incluyendo si es facturable, el modelo y categoría de precio.
+    """
     billable: bool
     pricing_model: str
     category: str
 
 class Status(BaseModel):
+    """
+    Estado de un mensaje, incluyendo su ID, estado, timestamp, ID del destinatario, conversación relacionada y detalles de facturación.
+    """
     id: str
     status: str
     timestamp: int
@@ -29,28 +42,49 @@ class Status(BaseModel):
     pricing: Pricing
 
 class Media(BaseModel):
+    """
+    Representa un medio general (imagen, audio, video, documento), con su tipo MIME, hash SHA256, ID y un subtítulo opcional.
+    """
     mime_type: str
     sha256: str
     id: str
-    caption: Optional[str] = None  # Asegúrate de que este campo sea opcional si no siempre se proporciona
+    caption: Optional[str] = None
 
 class Image(Media):
-    pass  # Sin cambios específicos requeridos
+    """
+    Especialización de Media para imágenes.
+    """
+    pass
 
 class Audio(Media):
-    pass  # Sin cambios específicos requeridos
+    """
+    Especialización de Media para audios.
+    """
+    pass
 
 class Video(Media):
-    pass  # Sin cambios específicos requeridos
+    """
+    Especialización de Media para videos.
+    """
+    pass
 
 class Document(Media):
-    filename: str  # Asegúrate de que este campo siempre se proporcione para documentos
+    """
+    Especialización de Media para documentos, requiriendo un nombre de archivo.
+    """
+    filename: str
 
 class Text(BaseModel):
+    """
+    Representa el cuerpo de un mensaje de texto.
+    """
     body: Optional[str] = None
 
 class Message(BaseModel):
-    from_: str = Field(..., alias='from')  # Asegúrate de que el alias se maneje correctamente
+    """
+    Abstracción de un mensaje, que puede ser de texto, imagen, audio, video o documento.
+    """
+    from_: str = Field(..., alias='from')
     id: str
     timestamp: int
     type: str
@@ -61,10 +95,16 @@ class Message(BaseModel):
     document: Optional[Document] = None
 
 class Metadata(BaseModel):
+    """
+    Metadatos asociados con un mensaje, incluyendo el número de teléfono mostrado y el ID del teléfono.
+    """
     display_phone_number: str
     phone_number_id: str
 
 class Value(BaseModel):
+    """
+    Valores dentro de un cambio notificado, incluyendo producto de mensajería, metadatos, contactos, mensajes y estados.
+    """
     messaging_product: str
     metadata: Metadata
     contacts: Optional[List[Contact]] = None
@@ -72,17 +112,29 @@ class Value(BaseModel):
     statuses: Optional[List[Status]] = None
 
 class Change(BaseModel):
+    """
+    Representa un cambio notificado, conteniendo el valor del cambio y el campo afectado.
+    """
     value: Value
     field: str
 
 class Entry(BaseModel):
+    """
+    Entrada en la notificación de un webhook, conteniendo los cambios notificados.
+    """
     id: str
     changes: List[Change]
 
 class IncomingMessage(BaseModel):
+    """
+    Mensaje entrante a través de un webhook, conteniendo las entradas con los cambios notificados.
+    """
     object: str
     entry: List[Entry]
 
 class SendMessageRequest(BaseModel):
+    """
+    Solicitud para enviar un mensaje, incluyendo el número del destinatario y el mensaje.
+    """
     recipient_number: str
     message: str
