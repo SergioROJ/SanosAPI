@@ -5,11 +5,12 @@ import logging
 import aiofiles
 from fastapi import APIRouter, HTTPException, status
 from fastapi.responses import JSONResponse
-from models import SendMessageRequest, IncomingMessage
+from models import SendMessageRequest, IncomingMessage, SendMessageTemplateRequest, Component
 from config import Config
 import httpx
-from httpx import HTTPError
+from httpx import HTTPError, AsyncClient, HTTPStatusError
 from typing import Optional
+from fastapi import Body
 
 router = APIRouter()
 
@@ -124,6 +125,75 @@ async def send_message(message_request: SendMessageRequest):
         logging.error(f"An unexpected error occurred while sending the message: {err}")
         raise HTTPException(status_code=500, detail="An unexpected error occurred")
 
+    
+@router.post("/send-template-message", response_model=dict, status_code=status.HTTP_200_OK, summary="Enviar mensaje basado en template", description="Este endpoint permite enviar un mensaje basado en template a través de WhatsApp.")
+async def send_template_message(request: SendMessageTemplateRequest = Body(..., example={
+    "messaging_product": "whatsapp",
+    "recipient_type": "individual",
+    "recipient_number": "18493445928",
+    "type": "template",
+    "template": {
+        "name": "hello_world",
+        "language": {
+            "code": "en_US"
+        },
+        "components": [
+            {
+                "type": "body",
+                "parameters": [
+                    {
+                        "type": "text",
+                        "text": "Hola Mundo"
+                    }
+                ]
+            }
+        ]
+    }
+})):
+    """
+    Envía un mensaje basado en template a través de WhatsApp.
+    
+    - **messaging_product**: Producto de mensajería (ej. whatsapp).
+    - **recipient_type**: Tipo de destinatario (ej. individual).
+    - **recipient_number**: Número del destinatario.
+    - **type**: Tipo de mensaje (template).
+    - **template**: Datos del template del mensaje.
+
+    Returns:
+        dict: Un diccionario que indica el éxito del envío del mensaje, incluyendo un mensaje de estado.
+    """
+    try:
+        async with AsyncClient() as client:
+            response = await client.post(
+                url=f"https://graph.facebook.com/{Config.VERSION}/{Config.PHONE_NUMBER_ID}/messages",
+                headers=get_headers(),
+                json={
+                    "messaging_product": request.messaging_product,
+                    "recipient_type": request.recipient_type,
+                    "to": request.to,
+                    "type": request.type,
+                    "template": {
+                        "name": request.template.name,
+                        "language": request.template.language,
+                        "components": [
+                            {
+                                "type": component.type,
+                                "parameters": [param.model_dump(exclude_none=True) for param in component.parameters]
+                            } for component in request.template.components
+                        ]
+                    },
+                },
+            )
+            response.raise_for_status()
+            return {"success": True, "message": "Mensaje enviado con éxito."}
+    except HTTPStatusError as http_exc:
+        # Error específico de respuestas HTTP no exitosas
+        detail = f"HTTP error: status {http_exc.response.status_code}"
+        raise HTTPException(status_code=http_exc.response.status_code, detail=detail)
+    except Exception as exc:
+        # Para cualquier otro tipo de error no capturado específicamente
+        detail = "Error inesperado al enviar el mensaje."
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=detail)
 async def get_media_url(media_id: str) -> Optional[str]:
     """
     Obtiene la URL de descarga de un medio específico utilizando su identificador único (media_id).
@@ -167,7 +237,7 @@ async def get_media_url(media_id: str) -> Optional[str]:
 
 
 async def save_media(media_url: str, media_type: str, media_id: str, mime_type: str, filename: Optional[str] = None) -> Optional[str]:
-    """
+    """p
     Descarga y guarda un medio (como imágenes, videos, etc.) localmente usando su URL.
     
     Este método asincrónico asegura que la descarga y almacenamiento del medio no bloqueen el procesamiento
@@ -345,7 +415,7 @@ async def receive_message(request: IncomingMessage):
     try:
         # Conversión del cuerpo de la solicitud a un diccionario para facilitar el registro y la depuración.
         # Es importante asegurar que el modelo IncomingMessage tenga un método 'dict()' para esta conversión.
-        request_data = request.dict()
+        request_data = request.model_dump()
         logging.info(f"Evento recibido: {request_data}")
 
         # Lista para acumular tareas asincrónicas correspondientes al procesamiento de cada mensaje.

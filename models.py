@@ -138,3 +138,25 @@ class SendMessageRequest(BaseModel):
     """
     recipient_number: str
     message: str
+
+class Parameter(BaseModel):
+    type: str
+    text: Optional[str] = None
+    currency: Optional[dict] = None
+    date_time: Optional[dict] = None
+
+class Component(BaseModel):
+    type: str = "body"
+    parameters: Optional[List[Parameter]] = []
+
+class Template(BaseModel):
+    name: str
+    language: dict
+    components: List[Component] = []
+
+class SendMessageTemplateRequest(BaseModel):
+    messaging_product: str = "whatsapp"
+    recipient_type: str = "individual"
+    to: str
+    type: str = "template"
+    template: Template
