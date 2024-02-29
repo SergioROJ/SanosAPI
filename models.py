@@ -23,7 +23,7 @@ class Conversation(BaseModel):
     """
     id: str
     origin: Optional[Origin] = None
-    expiration_timestamp: Optional[int] = None
+    expiration_timestamp: Optional[str] = None
 
 class Pricing(BaseModel):
     """
@@ -33,16 +33,17 @@ class Pricing(BaseModel):
     pricing_model: str
     category: str
 
-class Status(BaseModel):
+class Statuses(BaseModel):
     """
     Estado de un mensaje, incluyendo su ID, estado, timestamp, ID del destinatario, conversación relacionada y detalles de facturación.
     """
     id: str
     status: str
-    timestamp: int
+    timestamp: str
     recipient_id: str
-    conversation: Optional[Conversation] 
-    pricing: Optional[Pricing]
+    conversation: Optional[Conversation] = None
+    pricing: Optional[Pricing] = None
+
 
 class Media(BaseModel):
     """
@@ -112,7 +113,7 @@ class Value(BaseModel):
     metadata: Metadata
     contacts: Optional[List[Contact]] = None
     messages: Optional[List[Message]] = None
-    statuses: Optional[List[Status]] = None
+    statuses: Optional[List[Statuses]] = None
 
 class Change(BaseModel):
     """

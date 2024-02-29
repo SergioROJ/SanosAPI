@@ -431,6 +431,9 @@ async def receive_message(request: IncomingMessage):
                     # Esto permite un procesamiento concurrente y eficiente de múltiples mensajes.
                     for message in change.value.messages:
                         tasks.append(process_message(message))
+                elif change.value.statuses:
+                    for statuses in change.value.statuses:
+                        logging.info(f"Actualización de estado: {statuses.status}")
 
         # Si hay tareas programadas, se ejecutan de manera concurrente.
         # Esto es crucial para mantener la eficiencia y la capacidad de respuesta del servicio.
