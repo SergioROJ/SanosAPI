@@ -11,6 +11,7 @@ import httpx
 from httpx import HTTPError, AsyncClient, HTTPStatusError, ConnectTimeout
 from typing import Optional
 from fastapi import Body
+from subscriptions import send_event_notification
 
 router = APIRouter()
 
@@ -440,6 +441,8 @@ async def receive_message(request: IncomingMessage):
         if tasks:
             await asyncio.gather(*tasks)
             logging.info("Todas las tareas procesadas con éxito.")
+
+        await send_event_notification(request)
 
         # Respuesta exitosa tras el procesamiento de los mensajes.
         return JSONResponse(content={"status": "success", "message": "Evento procesado con éxito"}, status_code=status.HTTP_200_OK)

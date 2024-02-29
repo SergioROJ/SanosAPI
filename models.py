@@ -1,6 +1,16 @@
 from pydantic import BaseModel, Field
 from typing import List, Optional, Dict, Any
 
+# ****************************************
+# *                                      *
+# *                                      *
+# *                                      *
+# *  Modelos de enrutamiento a WhatsApp  *
+# *                                      *
+# *                                      *
+# *                                      *
+# ****************************************
+
 class Profile(BaseModel):
     """
     Representa el perfil de un contacto, con su nombre.
@@ -164,3 +174,17 @@ class SendMessageTemplateRequest(BaseModel):
     to: str
     type: str = "template"
     template: Template
+
+# ****************************************
+# *                                      *
+# *                                      *
+# *                                      *
+# *    MODELOS DE LÓGICA DE NEGOCIOS    *
+# *                                      *
+# *                                      *
+# *                                      *
+# ****************************************
+
+class WebhookRegistrationRequest(BaseModel):
+    url: str
+    events: list[str]  # Lista de eventos a los que el cliente desea suscribirse
