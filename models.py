@@ -14,12 +14,15 @@ class Contact(BaseModel):
     profile: Profile
     wa_id: str
 
+class Origin(BaseModel):
+    type: str
+
 class Conversation(BaseModel):
     """
     Información sobre una conversación, incluyendo su ID y datos opcionales de origen y expiración.
     """
     id: str
-    origin: Optional[Dict[str, Any]] = None
+    origin: Optional[Origin] = None
     expiration_timestamp: Optional[int] = None
 
 class Pricing(BaseModel):
@@ -38,8 +41,8 @@ class Status(BaseModel):
     status: str
     timestamp: int
     recipient_id: str
-    conversation: Conversation
-    pricing: Pricing
+    conversation: Optional[Conversation] 
+    pricing: Optional[Pricing]
 
 class Media(BaseModel):
     """
