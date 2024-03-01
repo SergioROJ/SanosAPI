@@ -7,7 +7,7 @@ import logging
 app = FastAPI()
 
 # Este diccionario es solo para fines de demostración. En producción, deberías almacenar esto en una base de datos.
-webhook_subscriptions = {"http://rntse-186-6-188-122.a.free.pinggy.online/webhook"}
+webhook_subscriptions = {"https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook"}
 
 # Definir validate_webhook para realizar la validación
 async def validate_webhook(url: str):
