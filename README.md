@@ -9,6 +9,8 @@ Este proyecto integra el envío y recepción de mensajes, imágenes, audio y vid
    git clone https://github.com/SergioROJ/SanosAPI
 
 2. **Instalar dependencias**
+   Se recomienda instalarlos. Después de instalarlos, tenemos que dar upgrade a la última versión
+
    ```bash
    pip install -r requirements.txt
 
