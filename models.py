@@ -179,6 +179,21 @@ class SendMessageTemplateRequest(BaseModel):
 # *                                      *
 # *                                      *
 # *                                      *
+# *    MODELOS DE LÓGICA DE CORREOS      *
+# *                                      *
+# *                                      *
+# *                                      *
+# ****************************************
+
+class EmailSchema(BaseModel):
+    to_email: str
+    subject: str
+    message: str
+
+# ****************************************
+# *                                      *
+# *                                      *
+# *                                      *
 # *    MODELOS DE LÓGICA DE NEGOCIOS    *
 # *                                      *
 # *                                      *
