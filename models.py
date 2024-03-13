@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, EmailStr
 from typing import List, Optional, Dict, Any
 
 # ****************************************
@@ -185,10 +185,20 @@ class SendMessageTemplateRequest(BaseModel):
 # *                                      *
 # ****************************************
 
+class EmailRecipient(BaseModel):
+    email: EmailStr
+    name: str
+
 class EmailSchema(BaseModel):
-    to_email: str
+    from_email: EmailStr
+    from_name: str
+    to_emails: List[EmailRecipient]
+    cc: Optional[List[EmailRecipient]] = []
+    bcc: Optional[List[EmailRecipient]] = []
     subject: str
-    message: str
+    text_part: str
+    html_part: str
+
 
 # ****************************************
 # *                                      *

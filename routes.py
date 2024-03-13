@@ -5,13 +5,15 @@ import logging
 import aiofiles
 from fastapi import APIRouter, HTTPException, status
 from fastapi.responses import JSONResponse
-from models import SendMessageRequest, IncomingMessage, SendMessageTemplateRequest, Component
+from models import SendMessageRequest, IncomingMessage, SendMessageTemplateRequest, Component, EmailSchema, EmailRecipient
 from config import Config
 import httpx
 from httpx import HTTPError, AsyncClient, HTTPStatusError, ConnectTimeout
 from typing import Optional
 from fastapi import Body
 from subscriptions import send_event_notification
+from mailjet_rest import Client
+import mailjet_rest
 
 router = APIRouter()
 
@@ -460,3 +462,65 @@ async def receive_message(request: IncomingMessage):
         # Respuesta indicando fallo en el procesamiento debido a la excepción capturada.
         # Devolver un mensaje de error específico puede ayudar en la identificación rápida del problema.
         return JSONResponse(content={"status": "error", "message": "Error al procesar evento"}, status_code=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+def build_recipients_list(recipients):
+    return [{"Email": r.email, "Name": r.name} if isinstance(r, EmailRecipient) else {"Email": r, "Name": r.split('@')[0]} for r in recipients]
+
+@router.post("/send-email")
+def send_email(email_data: EmailSchema):
+    try:
+        mailjet = Client(auth=(Config.MAILJET_KEY, Config.MAILJET_SECRET), version='v3.1')
+        # Transforma cada entrada a la estructura adecuada
+
+        message = {
+            "From": {
+                "Email": email_data.from_email,
+                "Name": email_data.from_name
+            },
+            "To": build_recipients_list(email_data.to_emails),
+            "Subject": email_data.subject,
+            "TextPart": email_data.text_part,
+            "HTMLPart": email_data.html_part,
+            "CustomID": "AppGettingStartedTest"
+        }
+
+        if email_data.cc:
+            message["Cc"] = build_recipients_list(email_data.cc)
+
+        if email_data.bcc:
+            message["Bcc"] = build_recipients_list(email_data.bcc)
+
+        data = {"Messages": [message]}
+
+            
+        result = mailjet.send.create(data=data)
+        if result.status_code == 200:
+            return {"message": "Email sent successfully"}
+        else:
+            # Log this error
+            logging.error(f"Fallo al enviar el correo: {result.json()}")
+            return JSONResponse(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                content={"message": "Email failed to send", "details": result.json()}
+            )
+    except mailjet_rest.ClientError as e:
+        # Log this error
+        logging.error(f"Fallo al enviar el correo: {str(e)}")
+        return JSONResponse(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            content={"message": "Client error occurred", "details": str(e)}
+        )
+    except mailjet_rest.APIError as e:
+        # Log this error
+        print(f"API error: {str(e)}")
+        return JSONResponse(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            content={"message": "API error occurred", "details": str(e)}
+        )
+    except Exception as e:
+        # Log this error
+        logging.error(f"Ha ocurrido un error no manejado: {str(e)}")
+        return JSONResponse(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            content={"message": "An unexpected error occurred", "details": str(e)}
+        )  
