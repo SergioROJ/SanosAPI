@@ -463,7 +463,7 @@ async def receive_message(request: IncomingMessage):
         # Devolver un mensaje de error específico puede ayudar en la identificación rápida del problema.
         return JSONResponse(content={"status": "error", "message": "Error al procesar evento"}, status_code=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-def build_recipients_list(recipients):
+def build_email_recipients_list(recipients):
     return [{"Email": r.email, "Name": r.name} if isinstance(r, EmailRecipient) else {"Email": r, "Name": r.split('@')[0]} for r in recipients]
 
 @router.post("/send-email")
@@ -477,7 +477,7 @@ def send_email(email_data: EmailSchema):
                 "Email": email_data.from_email,
                 "Name": email_data.from_name
             },
-            "To": build_recipients_list(email_data.to_emails),
+            "To": build_email_recipients_list(email_data.to_emails),
             "Subject": email_data.subject,
             "TextPart": email_data.text_part,
             "HTMLPart": email_data.html_part,
@@ -485,10 +485,10 @@ def send_email(email_data: EmailSchema):
         }
 
         if email_data.cc:
-            message["Cc"] = build_recipients_list(email_data.cc)
+            message["Cc"] = build_email_recipients_list(email_data.cc)
 
         if email_data.bcc:
-            message["Bcc"] = build_recipients_list(email_data.bcc)
+            message["Bcc"] = build_email_recipients_list(email_data.bcc)
 
         data = {"Messages": [message]}
 
