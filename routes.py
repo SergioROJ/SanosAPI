@@ -447,13 +447,19 @@ async def receive_message(request: IncomingMessage):
         await send_event_notification(request)
 
         # Respuesta exitosa tras el procesamiento de los mensajes.
-        return JSONResponse(content={"status": "success", "message": "Evento procesado con éxito"}, status_code=status.HTTP_200_OK)
+        return JSONResponse(
+            status_code=status.HTTP_200_OK,
+            content={"status": "success", "message": "Evento procesado con éxito"})
     except ConnectTimeout as e:
         logging.error("Connection timeout")
-        return JSONResponse(content={"status": "error", "message": "Timeout de conexión"}, status_code=status.HTTP_504_GATEWAY_TIMEOUT)
+        return JSONResponse(
+            status_code=status.HTTP_504_GATEWAY_TIMEOUT,
+            content={"status": "error", "message": "Timeout de conexión"})
     except HTTPStatusError as e:
         logging.error(f"Ha ocurrido un error no manejado: {e.response.status_code}")
-        return JSONResponse(content={"status": "error", "message": "Error, favor tomar nota de la actividad enviada y comunicarse con el supldior"}, status_code=status.HTTP_400_BAD_REQUEST)
+        return JSONResponse(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            content={"status": "error", "message": "Error, favor tomar nota de la actividad enviada y comunicarse con el supldior"})
     except Exception as e:
         # Registro de cualquier excepción ocurrida durante el procesamiento.
         # Es importante capturar y registrar excepciones para facilitar la depuración y mantenimiento.
@@ -461,7 +467,9 @@ async def receive_message(request: IncomingMessage):
 
         # Respuesta indicando fallo en el procesamiento debido a la excepción capturada.
         # Devolver un mensaje de error específico puede ayudar en la identificación rápida del problema.
-        return JSONResponse(content={"status": "error", "message": "Error al procesar evento"}, status_code=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        return JSONResponse(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            content={"status": "error", "message": "Error al procesar evento"})
 
 def build_email_recipients_list(recipients):
     return [{"Email": r.email, "Name": r.name} if isinstance(r, EmailRecipient) else {"Email": r, "Name": r.split('@')[0]} for r in recipients]
