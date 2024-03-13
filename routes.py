@@ -503,20 +503,6 @@ def send_email(email_data: EmailSchema):
                 status_code=status.HTTP_400_BAD_REQUEST,
                 content={"message": "Email failed to send", "details": result.json()}
             )
-    except mailjet_rest.ClientError as e:
-        # Log this error
-        logging.error(f"Fallo al enviar el correo: {str(e)}")
-        return JSONResponse(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            content={"message": "Client error occurred", "details": str(e)}
-        )
-    except mailjet_rest.APIError as e:
-        # Log this error
-        print(f"API error: {str(e)}")
-        return JSONResponse(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            content={"message": "API error occurred", "details": str(e)}
-        )
     except Exception as e:
         # Log this error
         logging.error(f"Ha ocurrido un error no manejado: {str(e)}")
