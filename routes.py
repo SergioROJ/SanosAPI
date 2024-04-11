@@ -1,11 +1,12 @@
 import os
 import requests
 import asyncio
+import tweepy
 import logging
 import aiofiles
 from fastapi import APIRouter, HTTPException, status
 from fastapi.responses import JSONResponse
-from models import SendMessageRequest, IncomingMessage, SendMessageTemplateRequest, Component, EmailSchema, EmailRecipient
+from models import SendMessageRequest, IncomingMessage, SendMessageTemplateRequest, Component, EmailSchema, EmailRecipient, TweetRequest, TwitterDMRequest
 from config import Config
 import httpx
 from httpx import HTTPError, AsyncClient, HTTPStatusError, ConnectTimeout
@@ -14,6 +15,7 @@ from fastapi import Body
 from subscriptions import send_event_notification
 from mailjet_rest import Client
 import mailjet_rest
+from pydantic import ValidationError
 
 router = APIRouter()
 
@@ -518,3 +520,58 @@ def send_email(email_data: EmailSchema):
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             content={"message": "An unexpected error occurred", "details": str(e)}
         )  
+    
+@router.post("/send-tweet")
+async def post_tweet(tweet_request: TweetRequest):
+    
+    client = tweepy.Client(
+        consumer_key=Config.TWITTER_CONSUMER_KEY,
+        consumer_secret=Config.TWITTER_CONSUMER_SECRET,
+        access_token=Config.TWITTER_ACCESS_TOKEN,
+        access_token_secret=Config.TWITTER_TOKEN_SECRET
+)
+    try:
+        response = client.create_tweet(text=tweet_request.text)
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    return response
+
+'''@router.post("/send-dm")
+async def send_direct_message(dm_request: TwitterDMRequest):
+    url = f"https://api.twitter.com/2/dm_conversations/with/{dm_request.participant_id}/messages"
+    payload = {
+        "message": {
+            "text": dm_request.message
+        }
+    }
+    headers = {
+        'Authorization': f'Bearer {Config.TWITTER_BEARER_TOKEN}',
+        'Content-Type': 'application/json'
+    }
+
+    try:
+        response = requests.post(url, json=payload, headers=headers)
+        response.raise_for_status()  # This will raise an HTTPError for bad responses (4XX or 5XX)
+    except requests.exceptions.HTTPError as http_err:
+        # Catching HTTP errors from Twitter API and providing a detailed message
+        return {"error": "HTTP error occurred", "details": str(http_err), "response": response.json()}
+    except requests.exceptions.RequestException as req_err:
+        # Catching other requests-related errors (e.g., connection issues)
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=f"Request error occurred: {str(req_err)}"
+        )
+    except ValidationError as val_err:
+        # Catching validation errors for the request model
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail=f"Validation error for the input data: {val_err.errors()}"
+        )
+    except Exception as err:
+        # Generic exception catch to handle unexpected errors
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"An unexpected error occurred: {str(err)}"
+        )
+
+    return {"message": "DM sent successfully", "data": response.json()}'''

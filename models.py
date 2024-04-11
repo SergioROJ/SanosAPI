@@ -213,3 +213,22 @@ class EmailSchema(BaseModel):
 class WebhookRegistrationRequest(BaseModel):
     url: str
     events: list[str]  # Lista de eventos a los que el cliente desea suscribirse
+
+
+# ****************************************
+# *                                      *
+# *                                      *
+# *                                      *
+# *    MODELOS DE LÓGICA DE TWITTER      *
+# *                                      *
+# *                                      *
+# *                                      *
+# ****************************************
+
+class TweetRequest(BaseModel):
+    text: str
+
+
+class TwitterDMRequest(BaseModel):
+    participant_id: str
+    message: str
