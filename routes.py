@@ -383,20 +383,18 @@ async def process_message(message):
             filename = getattr(media_section, 'filename', None)
             caption = getattr(media_section, 'caption', None)
 
-        # Proceder con el procesamiento si se presenta un ID de medio, indicando un mensaje de medio.
+        # Proceder con el procesamiento si se presenta un ID de media, indicando un mensaje de media.
         if media_id:
             logging.info(f"Procesando mensaje de tipo '{message.type}' con media_id '{media_id}'")
             await handle_media_message(media_id, message.type, mime_type, filename, caption)
         else:
-            # Registrar una advertencia si no se encuentra un ID de medio, indicando que el mensaje puede no requerir
+            # Registrar una advertencia si no se encuentra un ID de media, indicando que el mensaje puede no requerir
             # procesamiento o no ser compatible con la lógica actual.
             logging.warning(f"Mensaje recibido sin media_id. Tipo de mensaje: '{message.type}'")
     except Exception as e:
         # Registrar cualquier excepción encontrada durante el procesamiento del mensaje.
         # Esto ayuda a identificar problemas sin detener el procesamiento de mensajes subsiguientes.
         logging.error(f"Error al procesar mensaje: {e}")
-        # Dependiendo de las necesidades de la aplicación, podrías querer volver a lanzar excepciones o manejarlas
-        # de manera silenciosa. Esta decisión debe basarse en la criticidad de procesar cada mensaje con éxito.
 
 
 @router.post("/webhook", status_code=200)
@@ -523,18 +521,19 @@ def send_email(email_data: EmailSchema):
     
 @router.post("/send-tweet")
 async def post_tweet(tweet_request: TweetRequest):
-    
     client = tweepy.Client(
         consumer_key=Config.TWITTER_CONSUMER_KEY,
         consumer_secret=Config.TWITTER_CONSUMER_SECRET,
         access_token=Config.TWITTER_ACCESS_TOKEN,
         access_token_secret=Config.TWITTER_TOKEN_SECRET
-)
+    )
     try:
         response = client.create_tweet(text=tweet_request.text)
+        return response.data
+    except tweepy.TweepyException as e:
+        raise HTTPException(status_code=400, detail=f"Twitter API error: {str(e)}")
     except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
-    return response
+        raise HTTPException(status_code=500, detail=f"Server error: {str(e)}")
 
 '''@router.post("/send-dm")
 async def send_direct_message(dm_request: TwitterDMRequest):

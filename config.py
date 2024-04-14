@@ -30,6 +30,6 @@ class Config:
     MAILJET_SECRET = os.getenv('MAILJET_SECRET', 'default_value')
     TWITTER_CONSUMER_KEY = os.getenv('TWITTER_CONSUMER_KEY', 'default_value')
     TWITTER_CONSUMER_SECRET = os.getenv('TWITTER_CONSUMER_SECRET', 'default_value')
-    TWITTER_ACCESS_TOKEN = os.getenv('TWITTER_ACESS_TOKEN', 'default_value')
+    TWITTER_ACCESS_TOKEN = os.getenv('TWITTER_ACCESS_TOKEN', 'default_value')
     TWITTER_TOKEN_SECRET = os.getenv('TWITTER_TOKEN_SECRET', 'default_value')
     TWITTER_BEARER_TOKEN = os.getenv('TWITTER_BEARER_TOKEN', 'default_value')
