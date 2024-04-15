@@ -1,0 +1,39 @@
+Inicializando API...
+Inicializando API...
+Sending message to recipient_number: 18493445928
+HTTP Request: POST https://graph.facebook.com/v18.0/230985623437689/messages "HTTP/1.1 401 Unauthorized"
+Failed to send message, status code: 401
+#################################Inicializando API...#################################
+#################################Inicializando API...#################################
+prueba
+2024-04-14 21:21:10,448 - INFO - #################################Inicializando API...#################################
+2024-04-14 21:21:10,448 - WARNING - prueba
+2024-04-14 21:28:17,226 - INFO - #################################Inicializando API...#################################
+2024-04-14 21:28:17,230 - WARNING - prueba
+2024-04-14 21:30:09,744 - INFO - #################################Inicializando API...#################################
+2024-04-14 21:30:11,953 - INFO - #################################Inicializando API...#################################
+2024-04-14 21:34:00,343 - INFO - #################################Inicializando API...#################################
+2024-04-14 21:34:13,318 - INFO - {'url': '/send-message', 'method': 'POST'}
+2024-04-14 21:34:13,320 - INFO - Sending message to recipient_number: 18493445928
+2024-04-14 21:34:14,178 - INFO - HTTP Request: POST https://graph.facebook.com/v18.0/230985623437689/messages "HTTP/1.1 401 Unauthorized"
+2024-04-14 21:34:14,179 - ERROR - Failed to send message, status code: 401
+2024-04-14 21:37:03,620 - INFO - #################################Inicializando API...#################################
+2024-04-14 21:37:08,189 - INFO - {'url': '/send-message', 'method': 'POST', 'body': <bound method Request.body of <starlette.middleware.base._CachedRequest object at 0x0000021B5DD19220>>}
+2024-04-14 21:37:08,190 - INFO - Sending message to recipient_number: 18493445928
+2024-04-14 21:37:08,660 - INFO - HTTP Request: POST https://graph.facebook.com/v18.0/230985623437689/messages "HTTP/1.1 401 Unauthorized"
+2024-04-14 21:37:08,662 - ERROR - Failed to send message, status code: 401
+2024-04-14 21:37:31,397 - INFO - #################################Inicializando API...#################################
+2024-04-14 21:37:33,253 - INFO - {'url': '/send-message', 'method': 'POST', 'body': <starlette.middleware.base._CachedRequest object at 0x00000227335820C0>}
+2024-04-14 21:37:33,254 - INFO - Sending message to recipient_number: 18493445928
+2024-04-14 21:37:33,746 - INFO - HTTP Request: POST https://graph.facebook.com/v18.0/230985623437689/messages "HTTP/1.1 401 Unauthorized"
+2024-04-14 21:37:33,747 - ERROR - Failed to send message, status code: 401
+2024-04-14 21:39:18,040 - INFO - #################################Inicializando API...#################################
+2024-04-14 21:42:17,362 - INFO - #################################Inicializando API...#################################
+2024-04-14 21:46:30,227 - INFO - #################################Inicializando API...#################################
+2024-04-14 21:46:34,126 - INFO - Sending message to recipient_number: 18493445928
+2024-04-14 21:46:34,604 - INFO - HTTP Request: POST https://graph.facebook.com/v18.0/230985623437689/messages "HTTP/1.1 401 Unauthorized"
+2024-04-14 21:46:34,606 - ERROR - Failed to send message, status code: 401
+2024-04-14 21:46:34,606 - INFO - {'url': '/send-message', 'method': 'POST', 'process?time': 0.4803292751312256}
+2024-04-14 21:46:55,011 - INFO - #################################Inicializando API...#################################
+2024-04-14 21:50:44,048 - INFO - #################################Inicializando API...#################################
+2024-04-14 21:54:18,988 - INFO - #################################Inicializando API...#################################

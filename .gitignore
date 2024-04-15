@@ -1,5 +1,7 @@
 # .gitignore
 .env
+emails.py
+directorio.txt
 bp/
 conversiones/
 # Ignorar todo dentro de las subcarpetas de media, pero incluir las carpetas

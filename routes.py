@@ -8,6 +8,7 @@ from fastapi import APIRouter, HTTPException, status
 from fastapi.responses import JSONResponse
 from models import SendMessageRequest, IncomingMessage, SendMessageTemplateRequest, Component, EmailSchema, EmailRecipient, TweetRequest, TwitterDMRequest
 from config import Config
+from custom_metrics import CustomMetricsPrometheus
 import httpx
 from httpx import HTTPError, AsyncClient, HTTPStatusError, ConnectTimeout
 from typing import Optional
@@ -16,6 +17,7 @@ from subscriptions import send_event_notification
 from mailjet_rest import Client
 import mailjet_rest
 from pydantic import ValidationError
+import prometheus_client
 
 router = APIRouter()
 
@@ -93,7 +95,7 @@ async def send_message(message_request: SendMessageRequest):
                                                necesaria para enviar el mensaje. Incluye el número del destinatario
                                                y el cuerpo del mensaje.
 
-    Returns:
+    Returns: 
         dict: Un diccionario que indica el éxito del envío del mensaje, incluyendo un mensaje de estado.
 
     El proceso comienza registrando la intención de enviar un mensaje, seguido por la preparación y envío de la
@@ -117,6 +119,7 @@ async def send_message(message_request: SendMessageRequest):
             },
         )
         response.raise_for_status()  # Asegura manejar respuestas HTTP no exitosas adecuadamente.
+        CustomMetricsPrometheus.Cantidad_mensajes_whatsapp_enviados.inc(1)
 
         # Registro de éxito al enviar el mensaje.
         logging.info("Message sent successfully")
