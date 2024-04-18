@@ -37,3 +37,558 @@ prueba
 2024-04-14 21:46:55,011 - INFO - #################################Inicializando API...#################################
 2024-04-14 21:50:44,048 - INFO - #################################Inicializando API...#################################
 2024-04-14 21:54:18,988 - INFO - #################################Inicializando API...#################################
+2024-04-18 11:18:04,571 - INFO - #################################Inicializando API...#################################
+2024-04-18 11:20:03,462 - INFO - #################################Inicializando API...#################################
+2024-04-18 11:24:00,314 - INFO - {'url': '/docs', 'method': 'GET', 'process_time': 0.0010008811950683594}
+2024-04-18 11:24:00,973 - INFO - {'url': '/openapi.json', 'method': 'GET', 'process_time': 0.01751089096069336}
+2024-04-18 11:24:04,432 - INFO - {'url': '/docs', 'method': 'GET', 'process_time': 0.0}
+2024-04-18 11:24:04,539 - INFO - {'url': '/openapi.json', 'method': 'GET', 'process_time': 0.0}
+2024-04-18 11:24:05,504 - INFO - {'url': '/docs', 'method': 'GET', 'process_time': 0.0}
+2024-04-18 11:24:05,591 - INFO - {'url': '/openapi.json', 'method': 'GET', 'process_time': 0.0010006427764892578}
+2024-04-18 11:24:06,531 - INFO - {'url': '/docs', 'method': 'GET', 'process_time': 0.0}
+2024-04-18 11:24:06,619 - INFO - {'url': '/openapi.json', 'method': 'GET', 'process_time': 0.001001596450805664}
+2024-04-18 11:25:17,114 - INFO - #################################Inicializando API...#################################
+2024-04-18 11:27:11,048 - INFO - Sending message to recipient_number: 18493445928
+2024-04-18 11:27:12,663 - INFO - HTTP Request: POST https://graph.facebook.com/v18.0/230985623437689/messages "HTTP/1.1 200 OK"
+2024-04-18 11:27:12,664 - INFO - Message sent successfully
+2024-04-18 11:27:12,665 - INFO - {'url': '/send-message', 'method': 'POST', 'process_time': 1.6175191402435303}
+2024-04-18 11:28:49,274 - INFO - Sending message to recipient_number: 18493445928
+2024-04-18 11:28:50,127 - INFO - HTTP Request: POST https://graph.facebook.com/v18.0/230985623437689/messages "HTTP/1.1 200 OK"
+2024-04-18 11:28:50,128 - INFO - Message sent successfully
+2024-04-18 11:28:50,128 - INFO - {'url': '/send-message', 'method': 'POST', 'process_time': 0.8548698425292969}
+2024-04-18 11:30:59,616 - INFO - Sending message to recipient_number: 18493445928
+2024-04-18 11:31:00,395 - INFO - HTTP Request: POST https://graph.facebook.com/v18.0/230985623437689/messages "HTTP/1.1 200 OK"
+2024-04-18 11:31:00,395 - INFO - Message sent successfully
+2024-04-18 11:31:00,396 - INFO - {'url': '/send-message', 'method': 'POST', 'process_time': 0.7805333137512207}
+2024-04-18 11:39:44,616 - INFO - {'url': '/webhook', 'method': 'GET', 'process_time': 0.0}
+2024-04-18 11:39:45,133 - INFO - {'url': '/favicon.ico', 'method': 'GET', 'process_time': 0.0}
+2024-04-18 11:43:53,192 - INFO - #################################Inicializando API...#################################
+2024-04-18 11:44:21,303 - INFO - Sending message to recipient_number: 18493445928
+2024-04-18 11:44:22,561 - INFO - HTTP Request: POST https://graph.facebook.com/v18.0/230985623437689/messages "HTTP/1.1 200 OK"
+2024-04-18 11:44:22,563 - INFO - Message sent successfully
+2024-04-18 11:44:22,564 - INFO - {'url': '/send-message', 'method': 'POST', 'process_time': 1.2612857818603516}
+2024-04-18 11:47:37,153 - INFO - #################################Inicializando API...#################################
+2024-04-18 11:47:50,786 - INFO - #################################Inicializando API...#################################
+2024-04-18 11:47:55,945 - INFO - Sending message to recipient_number: 18493445928
+2024-04-18 11:47:57,052 - INFO - HTTP Request: POST https://graph.facebook.com/v18.0/230985623437689/messages "HTTP/1.1 200 OK"
+2024-04-18 11:47:57,053 - INFO - Message sent successfully
+2024-04-18 11:47:57,054 - INFO - {'url': '/send-message', 'method': 'POST', 'process_time': 1.1113646030426025, 'prueba': <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x0000027AF48BCD70>>}
+2024-04-18 11:50:09,021 - INFO - #################################Inicializando API...#################################
+2024-04-18 11:50:13,525 - INFO - Sending message to recipient_number: 18493445928
+2024-04-18 11:50:14,306 - INFO - HTTP Request: POST https://graph.facebook.com/v18.0/230985623437689/messages "HTTP/1.1 200 OK"
+2024-04-18 11:50:14,306 - INFO - Message sent successfully
+2024-04-18 11:50:14,307 - INFO - {'url': '/send-message', 'method': 'POST', 'process_time': 0.783254861831665, 'prueba': <function receive_message at 0x00000287510F4B80>}
+2024-04-18 11:50:33,188 - INFO - #################################Inicializando API...#################################
+2024-04-18 11:50:38,233 - INFO - Sending message to recipient_number: 18493445928
+2024-04-18 11:50:39,003 - INFO - HTTP Request: POST https://graph.facebook.com/v18.0/230985623437689/messages "HTTP/1.1 200 OK"
+2024-04-18 11:50:39,004 - INFO - Message sent successfully
+2024-04-18 11:50:39,004 - INFO - {'url': '/send-message', 'method': 'POST', 'process_time': 0.7711026668548584, 'prueba': <class 'models.IncomingMessage'>}
+2024-04-18 11:52:13,310 - INFO - #################################Inicializando API...#################################
+2024-04-18 11:55:08,667 - INFO - #################################Inicializando API...#################################
+2024-04-18 11:55:17,273 - INFO - Sending message to recipient_number: 18493445928
+2024-04-18 11:55:18,126 - INFO - HTTP Request: POST https://graph.facebook.com/v18.0/230985623437689/messages "HTTP/1.1 200 OK"
+2024-04-18 11:55:18,127 - INFO - Message sent successfully
+2024-04-18 11:55:18,127 - INFO - {'url': '/send-message', 'method': 'POST', 'process_time': 0.8556008338928223}
+2024-04-18 11:59:04,658 - INFO - #################################Inicializando API...#################################
+2024-04-18 11:59:19,328 - INFO - Sending message to recipient_number: 18493445928
+2024-04-18 11:59:20,129 - INFO - HTTP Request: POST https://graph.facebook.com/v18.0/230985623437689/messages "HTTP/1.1 200 OK"
+2024-04-18 11:59:20,130 - INFO - Message sent successfully
+2024-04-18 11:59:20,131 - INFO - {'url': '/send-message', 'method': 'POST', 'process_time': 0.8035578727722168}
+2024-04-18 12:01:22,982 - INFO - #################################Inicializando API...#################################
+2024-04-18 12:02:16,080 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': [{'profile': {'name': 'Sergio R'}, 'wa_id': '18493445928'}], 'messages': [{'from_': '18493445928', 'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgASGBI3QzZERUFERUZGOURBN0ZDM0YA', 'timestamp': 1713456137, 'type': 'text', 'text': {'body': 'a'}, 'image': None, 'audio': None, 'video': None, 'document': None}], 'statuses': None}, 'field': 'messages'}]}]}
+2024-04-18 12:02:16,080 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 12:02:16,081 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 12:02:16,400 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 12:02:16,624 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 12:02:16,625 - INFO - {'event': 'webhook_processed', 'duration': 0.5452888011932373}
+2024-04-18 12:02:16,625 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.5462892055511475}
+2024-04-18 12:07:55,494 - INFO - Sending message to recipient_number: 18493445928
+2024-04-18 12:07:56,334 - INFO - HTTP Request: POST https://graph.facebook.com/v18.0/230985623437689/messages "HTTP/1.1 200 OK"
+2024-04-18 12:07:56,334 - INFO - Message sent successfully
+2024-04-18 12:07:56,335 - INFO - {'url': '/send-message', 'method': 'POST', 'process_time': 0.8409693241119385}
+2024-04-18 12:32:02,234 - INFO - HTTP Request: POST https://graph.facebook.com/v18.0/230985623437689/messages "HTTP/1.1 200 OK"
+2024-04-18 12:32:02,236 - INFO - {'url': '/send-template-message', 'method': 'POST', 'process_time': 1.034358024597168}
+2024-04-18 13:56:15,650 - INFO - Sending message to recipient_number: 18296392842
+2024-04-18 13:56:17,343 - INFO - HTTP Request: POST https://graph.facebook.com/v18.0/230985623437689/messages "HTTP/1.1 200 OK"
+2024-04-18 13:56:17,344 - INFO - Message sent successfully
+2024-04-18 13:56:17,345 - INFO - {'url': '/send-message', 'method': 'POST', 'process_time': 1.6974942684173584}
+2024-04-18 14:01:00,959 - INFO - #################################Inicializando API...#################################
+2024-04-18 14:01:20,290 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': [{'profile': {'name': 'Sergio R'}, 'wa_id': '18493445928'}], 'messages': [{'from_': '18493445928', 'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgASGBJBNURENjRGQURCOTI2RUUwNDAA', 'timestamp': 1713463282, 'type': 'text', 'text': {'body': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'}, 'image': None, 'audio': None, 'video': None, 'document': None}], 'statuses': None}, 'field': 'messages'}]}]}
+2024-04-18 14:01:20,290 - INFO - #################################################################################################
+2024-04-18 14:01:20,291 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 14:01:20,291 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 14:01:20,612 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:01:20,879 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:01:20,880 - INFO - {'event': 'webhook_processed', 'duration': 0.5900876522064209}
+2024-04-18 14:01:20,880 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.591087818145752}
+2024-04-18 14:01:32,299 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': [{'profile': {'name': 'Sergio R'}, 'wa_id': '18493445928'}], 'messages': [{'from_': '18493445928', 'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgASGBJBRDlFOEY2ODBEOEJGRUE3RTcA', 'timestamp': 1713463266, 'type': 'text', 'text': {'body': 'aaaaa'}, 'image': None, 'audio': None, 'video': None, 'document': None}], 'statuses': None}, 'field': 'messages'}]}]}
+2024-04-18 14:01:32,299 - INFO - #################################################################################################
+2024-04-18 14:01:32,299 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 14:01:32,299 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 14:01:32,618 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:01:32,812 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:01:32,813 - INFO - {'event': 'webhook_processed', 'duration': 0.5147101879119873}
+2024-04-18 14:01:32,813 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.5149369239807129}
+2024-04-18 14:01:37,139 - INFO - #################################Inicializando API...#################################
+2024-04-18 14:01:49,129 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': [{'profile': {'name': 'Sergio R'}, 'wa_id': '18493445928'}], 'messages': [{'from_': '18493445928', 'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgASGBIxRjIxMDdCRjdDM0NCRkM5NEUA', 'timestamp': 1713463311, 'type': 'text', 'text': {'body': 'a'}, 'image': None, 'audio': None, 'video': None, 'document': None}], 'statuses': None}, 'field': 'messages'}]}]}
+2024-04-18 14:01:49,130 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 14:01:49,130 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 14:01:49,443 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:01:49,660 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:01:49,661 - INFO - {'event': 'webhook_processed', 'duration': 0.5319571495056152}
+2024-04-18 14:01:49,661 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.5319571495056152}
+2024-04-18 14:01:56,049 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': [{'profile': {'name': 'Tico'}, 'wa_id': '18296379518'}], 'messages': [{'from_': '18296379518', 'id': 'wamid.HBgLMTgyOTYzNzk1MTgVAgASGCAxODQ3NUNDRTJFMkQyOUY3OTM3M0IwREYwNDMwOEUwMgA=', 'timestamp': 1713463318, 'type': 'text', 'text': {'body': 'Qthwfbwfjwf'}, 'image': None, 'audio': None, 'video': None, 'document': None}], 'statuses': None}, 'field': 'messages'}]}]}
+2024-04-18 14:01:56,050 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 14:01:56,050 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 14:01:56,363 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:01:56,577 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:01:56,578 - INFO - {'event': 'webhook_processed', 'duration': 0.529132604598999}
+2024-04-18 14:01:56,578 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.5296273231506348}
+2024-04-18 14:02:40,407 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': [{'profile': {'name': 'Tico'}, 'wa_id': '18296379518'}], 'messages': [{'from_': '18296379518', 'id': 'wamid.HBgLMTgyOTYzNzk1MTgVAgASGBYzRUIwMzhBODUxNzU0OURGM0NCMDY5AA==', 'timestamp': 1713462933, 'type': 'text', 'text': {'body': 'dddd'}, 'image': None, 'audio': None, 'video': None, 'document': None}], 'statuses': None}, 'field': 'messages'}]}]}
+2024-04-18 14:02:40,408 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 14:02:40,408 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 14:02:40,731 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:02:40,734 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': [{'profile': {'name': 'Tico'}, 'wa_id': '18296379518'}], 'messages': [{'from_': '18296379518', 'id': 'wamid.HBgLMTgyOTYzNzk1MTgVAgASGCAzNjI2OEMxRkQwQjVDMTk2QTQwQkQyM0FBN0YwNzU4NwA=', 'timestamp': 1713463362, 'type': 'text', 'text': {'body': 'Mmg'}, 'image': None, 'audio': None, 'video': None, 'document': None}], 'statuses': None}, 'field': 'messages'}]}]}
+2024-04-18 14:02:40,735 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 14:02:40,735 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 14:02:41,060 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:02:41,274 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:02:41,274 - INFO - {'event': 'webhook_processed', 'duration': 0.8669638633728027}
+2024-04-18 14:02:41,275 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.8684689998626709}
+2024-04-18 14:02:41,278 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:02:41,279 - INFO - {'event': 'webhook_processed', 'duration': 0.5455574989318848}
+2024-04-18 14:02:41,279 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.5465607643127441}
+2024-04-18 14:03:02,652 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTgyOTYzOTI4NDIVAgARGBI0MjAwQTY3MDQxQkU2RDIyQjcA', 'status': 'sent', 'timestamp': '1713462980', 'recipient_id': '18296392842', 'conversation': {'id': '3cf1064dd3c4a4ff869ce8dbd231d8e6', 'origin': {'type': 'service'}, 'expiration_timestamp': '1713549420'}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'service'}}]}, 'field': 'messages'}]}]}
+2024-04-18 14:03:02,653 - INFO - Actualización de estado: sent
+2024-04-18 14:03:03,269 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:03:03,475 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:03:03,476 - INFO - {'event': 'webhook_processed', 'duration': 0.8234462738037109}
+2024-04-18 14:03:03,477 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.825951337814331}
+2024-04-18 14:03:05,821 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgASGBIxMzE3NTQxQjZDRDdFOUY1QzUA', 'status': 'failed', 'timestamp': '1713463388', 'recipient_id': '18493445928', 'conversation': None, 'pricing': None}]}, 'field': 'messages'}]}]}
+2024-04-18 14:03:05,822 - INFO - Actualización de estado: failed
+2024-04-18 14:03:06,578 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:03:06,584 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': [{'profile': {'name': 'Sergio R'}, 'wa_id': '18493445928'}], 'messages': [{'from_': '18493445928', 'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgASGBI1RjJFQzVCM0NEQUJENzlCOEMA', 'timestamp': 1713463386, 'type': 'sticker', 'text': None, 'image': None, 'audio': None, 'video': None, 'document': None}], 'statuses': None}, 'field': 'messages'}]}]}
+2024-04-18 14:03:06,586 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': [{'profile': {'name': 'Sergio R'}, 'wa_id': '18493445928'}], 'messages': [{'from_': '18493445928', 'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgASGBIyOUFGM0M4NzE3M0U0REU1ODIA', 'timestamp': 1713463386, 'type': 'sticker', 'text': None, 'image': None, 'audio': None, 'video': None, 'document': None}], 'statuses': None}, 'field': 'messages'}]}]}
+2024-04-18 14:03:06,588 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'sticker'
+2024-04-18 14:03:06,588 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'sticker'
+2024-04-18 14:03:06,589 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 14:03:07,392 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:03:07,394 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 14:03:08,203 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:03:08,330 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:03:08,331 - INFO - {'event': 'webhook_processed', 'duration': 2.5104899406433105}
+2024-04-18 14:03:08,332 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 2.5124125480651855}
+2024-04-18 14:03:08,403 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:03:08,405 - INFO - {'event': 'webhook_processed', 'duration': 1.8190159797668457}
+2024-04-18 14:03:08,405 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 1.8210158348083496}
+2024-04-18 14:03:08,407 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:03:08,409 - INFO - {'event': 'webhook_processed', 'duration': 1.8244280815124512}
+2024-04-18 14:03:08,409 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 1.8249306678771973}
+2024-04-18 14:03:53,387 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTgyOTYzOTI4NDIVAgARGBI0MjAwQTY3MDQxQkU2RDIyQjcA', 'status': 'delivered', 'timestamp': '1713462982', 'recipient_id': '18296392842', 'conversation': {'id': '3cf1064dd3c4a4ff869ce8dbd231d8e6', 'origin': {'type': 'service'}, 'expiration_timestamp': None}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'service'}}]}, 'field': 'messages'}]}]}
+2024-04-18 14:03:53,388 - INFO - Actualización de estado: delivered
+2024-04-18 14:03:54,039 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:03:54,260 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:03:54,261 - INFO - {'event': 'webhook_processed', 'duration': 0.8737103939056396}
+2024-04-18 14:03:54,262 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.8752119541168213}
+2024-04-18 14:04:32,506 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': [{'profile': {'name': 'Sergio R'}, 'wa_id': '18493445928'}], 'messages': [{'from_': '18493445928', 'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgASGBJGMTdFOTlCQTIzMDYyRUY5QjMA', 'timestamp': 1713463473, 'type': 'image', 'text': None, 'image': {'mime_type': 'image/jpeg', 'sha256': 'PCeeqGjPWTMecpoXBrsZZ3bAvHPRiQSLNkZ6U9k8yGc=', 'id': '983344830165758', 'caption': None}, 'audio': None, 'video': None, 'document': None}], 'statuses': None}, 'field': 'messages'}]}]}
+2024-04-18 14:04:32,508 - INFO - Procesando mensaje de tipo 'image' con media_id '983344830165758'
+2024-04-18 14:04:32,508 - INFO - Processing media message: 983344830165758
+2024-04-18 14:04:32,508 - INFO - Fetching media URL for media_id: 983344830165758
+2024-04-18 14:04:33,579 - INFO - HTTP Request: GET https://graph.facebook.com/v18.0/983344830165758 "HTTP/1.1 200 OK"
+2024-04-18 14:04:33,580 - INFO - Media URL fetched successfully
+2024-04-18 14:04:33,581 - INFO - Saving media, media_id: 983344830165758, media_type: image
+2024-04-18 14:04:34,663 - INFO - HTTP Request: GET https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=983344830165758&ext=1713463776&hash=ATtBN7D26AM1TJwae4c3_JVxdGuzY0KykWUi4X6fxMlZ_A "HTTP/1.1 200 OK"
+2024-04-18 14:04:34,778 - INFO - Media downloaded and saved at: ./media/image/983344830165758.jpeg
+2024-04-18 14:04:34,778 - INFO - Media saved successfully at ./media/image/983344830165758.jpeg
+2024-04-18 14:04:34,779 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 14:04:35,431 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:04:35,609 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:04:35,610 - INFO - {'event': 'webhook_processed', 'duration': 3.104952335357666}
+2024-04-18 14:04:35,610 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 3.105952501296997}
+2024-04-18 14:05:43,278 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBJBNENGQzI0MkNFOUE3QTkzREIA', 'status': 'delivered', 'timestamp': '1713456481', 'recipient_id': '18493445928', 'conversation': {'id': '29d7a0258302c718f1364e8ed0f4680f', 'origin': {'type': 'service'}, 'expiration_timestamp': None}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'service'}}]}, 'field': 'messages'}]}]}
+2024-04-18 14:05:43,279 - INFO - Actualización de estado: delivered
+2024-04-18 14:05:43,577 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:05:43,830 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:05:43,830 - INFO - {'event': 'webhook_processed', 'duration': 0.5516612529754639}
+2024-04-18 14:05:43,831 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.552661657333374}
+2024-04-18 14:06:23,519 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': [{'profile': {'name': 'Tico'}, 'wa_id': '18296379518'}], 'messages': [{'from_': '18296379518', 'id': 'wamid.HBgLMTgyOTYzNzk1MTgVAgASGCBCQkFGOUFEMTcwM0E2MDdGNkI3MzI5OUJBNEUyMjY2MQA=', 'timestamp': 1713463185, 'type': 'text', 'text': {'body': 'Hehdhsjsjs'}, 'image': None, 'audio': None, 'video': None, 'document': None}], 'statuses': None}, 'field': 'messages'}]}]}
+2024-04-18 14:06:23,521 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 14:06:23,522 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 14:06:24,242 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:06:24,446 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:06:24,448 - INFO - {'event': 'webhook_processed', 'duration': 0.9290549755096436}
+2024-04-18 14:06:24,449 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.9310274124145508}
+2024-04-18 14:06:59,846 - INFO - #################################Inicializando API...#################################
+2024-04-18 14:07:06,631 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgASGBJCRkY0QjZERDM5MzA4MjlGRjYA', 'status': 'failed', 'timestamp': '1713463629', 'recipient_id': '18493445928', 'conversation': None, 'pricing': None}]}, 'field': 'messages'}]}]}
+2024-04-18 14:07:06,632 - INFO - Actualización de estado: failed
+2024-04-18 14:07:07,307 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:07:07,539 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:07:07,540 - INFO - {'event': 'webhook_processed', 'duration': 0.9096779823303223}
+2024-04-18 14:07:07,541 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.9126849174499512}
+2024-04-18 14:07:17,219 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': [{'profile': {'name': 'Sergio R'}, 'wa_id': '18493445928'}], 'messages': [{'from_': '18493445928', 'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgASGBI1MEEzOTA5OTBGNUI4NDQ1RTkA', 'timestamp': 1713463638, 'type': 'image', 'text': None, 'image': {'mime_type': 'image/jpeg', 'sha256': 'PCeeqGjPWTMecpoXBrsZZ3bAvHPRiQSLNkZ6U9k8yGc=', 'id': '933877984952410', 'caption': None}, 'audio': None, 'video': None, 'document': None}], 'statuses': None}, 'field': 'messages'}]}]}
+2024-04-18 14:07:17,220 - INFO - Procesando mensaje de tipo 'image' con media_id '933877984952410'
+2024-04-18 14:07:17,220 - INFO - Processing media message: 933877984952410
+2024-04-18 14:07:17,221 - INFO - Fetching media URL for media_id: 933877984952410
+2024-04-18 14:07:18,025 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': [{'profile': {'name': 'Sergio R'}, 'wa_id': '18493445928'}], 'messages': [{'from_': '18493445928', 'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgASGBJDQjkzQjVFNTcwREEzRjQ3RDcA', 'timestamp': 1713463239, 'type': 'text', 'text': {'body': 'aaa'}, 'image': None, 'audio': None, 'video': None, 'document': None}], 'statuses': None}, 'field': 'messages'}]}]}
+2024-04-18 14:07:18,026 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 14:07:18,026 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 14:07:18,818 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:07:19,049 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:07:19,050 - INFO - HTTP Request: GET https://graph.facebook.com/v18.0/933877984952410 "HTTP/1.1 200 OK"
+2024-04-18 14:07:19,051 - INFO - {'event': 'webhook_processed', 'duration': 1.0261764526367188}
+2024-04-18 14:07:19,052 - INFO - Media URL fetched successfully
+2024-04-18 14:07:19,052 - INFO - Saving media, media_id: 933877984952410, media_type: image
+2024-04-18 14:07:19,747 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 1.723884105682373}
+2024-04-18 14:07:19,751 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': [{'profile': {'name': 'Sergio R'}, 'wa_id': '18493445928'}], 'messages': [{'from_': '18493445928', 'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgASGBI1MDUyRTc1QUM0QjkwRTNCMzIA', 'timestamp': 1713463216, 'type': 'text', 'text': {'body': 'aaaaa'}, 'image': None, 'audio': None, 'video': None, 'document': None}], 'statuses': None}, 'field': 'messages'}]}]}
+2024-04-18 14:07:19,754 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 14:07:19,754 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 14:07:20,380 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:07:20,579 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:07:20,580 - INFO - {'event': 'webhook_processed', 'duration': 0.8284416198730469}
+2024-04-18 14:07:20,580 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.8297812938690186}
+2024-04-18 14:07:20,825 - INFO - HTTP Request: GET https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=933877984952410&ext=1713463941&hash=ATuPdzx5a3E1HVURygf6VgZBFBhO8R77nhI4rqcw1Lr8-Q "HTTP/1.1 200 OK"
+2024-04-18 14:07:20,933 - INFO - Media downloaded and saved at: ./media/image/933877984952410.jpeg
+2024-04-18 14:07:20,933 - INFO - Media saved successfully at ./media/image/933877984952410.jpeg
+2024-04-18 14:07:20,933 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 14:07:21,248 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:07:21,458 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:07:21,461 - INFO - {'event': 'webhook_processed', 'duration': 4.241819143295288}
+2024-04-18 14:07:21,462 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 4.243898391723633}
+2024-04-18 14:08:04,817 - INFO - #################################Inicializando API...#################################
+2024-04-18 14:08:14,082 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgASGBI1REM0MUU5MUQ5MkRFMEU5REEA', 'status': 'failed', 'timestamp': '1713463696', 'recipient_id': '18493445928', 'conversation': None, 'pricing': None}]}, 'field': 'messages'}]}]}
+2024-04-18 14:08:14,083 - INFO - Actualización de estado: failed
+2024-04-18 14:08:14,769 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:08:14,773 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgASGBI1REM0MUU5MUQ5MkRFMEU5REEA', 'status': 'failed', 'timestamp': '1713463696', 'recipient_id': '18493445928', 'conversation': None, 'pricing': None}]}, 'field': 'messages'}]}]}
+2024-04-18 14:08:14,773 - INFO - Actualización de estado: failed
+2024-04-18 14:08:15,476 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:08:15,694 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:08:15,695 - INFO - {'event': 'webhook_processed', 'duration': 1.6129636764526367}
+2024-04-18 14:08:15,697 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:08:15,698 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 1.61647629737854}
+2024-04-18 14:08:15,699 - INFO - {'event': 'webhook_processed', 'duration': 0.9258012771606445}
+2024-04-18 14:08:15,700 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.9281468391418457}
+2024-04-18 14:09:05,493 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBIzMzMyRTM1NzJENUZFMDExOUMA', 'status': 'delivered', 'timestamp': '1713055759', 'recipient_id': '18493445928', 'conversation': {'id': '793f07a281a6e518024bf8695c9863d8', 'origin': {'type': 'service'}, 'expiration_timestamp': None}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'service'}}]}, 'field': 'messages'}]}]}
+2024-04-18 14:09:05,493 - INFO - Actualización de estado: delivered
+2024-04-18 14:09:05,802 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:09:05,978 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:09:05,979 - INFO - {'event': 'webhook_processed', 'duration': 0.48564863204956055}
+2024-04-18 14:09:05,979 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.48615312576293945}
+2024-04-18 14:09:37,672 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTgyOTYzOTI4NDIVAgARGBI0MjAwQTY3MDQxQkU2RDIyQjcA', 'status': 'read', 'timestamp': '1713463780', 'recipient_id': '18296392842', 'conversation': None, 'pricing': None}]}, 'field': 'messages'}]}]}
+2024-04-18 14:09:37,672 - INFO - Actualización de estado: read
+2024-04-18 14:09:38,307 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:09:38,534 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:09:38,535 - INFO - {'event': 'webhook_processed', 'duration': 0.8634340763092041}
+2024-04-18 14:09:38,536 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.8640706539154053}
+2024-04-18 14:09:44,453 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 14:09:44,453 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 14:09:45,157 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:09:45,342 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:09:45,343 - INFO - {'event': 'webhook_processed', 'duration': 0.9751124382019043}
+2024-04-18 14:09:45,344 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.977116584777832}
+2024-04-18 14:09:48,170 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBJBNENGQzI0MkNFOUE3QTkzREIA', 'status': 'delivered', 'timestamp': '1713456479', 'recipient_id': '18493445928', 'conversation': {'id': '29d7a0258302c718f1364e8ed0f4680f', 'origin': {'type': 'service'}, 'expiration_timestamp': None}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'service'}}]}, 'field': 'messages'}]}]}
+2024-04-18 14:09:48,171 - INFO - Actualización de estado: delivered
+2024-04-18 14:09:48,848 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:09:49,045 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:09:49,046 - INFO - {'event': 'webhook_processed', 'duration': 0.8764848709106445}
+2024-04-18 14:09:49,046 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.8778476715087891}
+2024-04-18 14:24:13,114 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBI3Rjc4NzI5N0FDQUVFN0ZERDIA', 'status': 'sent', 'timestamp': '1713051643', 'recipient_id': '18493445928', 'conversation': {'id': '793f07a281a6e518024bf8695c9863d8', 'origin': {'type': 'service'}, 'expiration_timestamp': '1713136800'}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'service'}}]}, 'field': 'messages'}]}]}
+2024-04-18 14:24:13,115 - INFO - Actualización de estado: sent
+2024-04-18 14:24:13,734 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:24:14,005 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:24:14,005 - INFO - {'event': 'webhook_processed', 'duration': 0.8911252021789551}
+2024-04-18 14:24:14,006 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.8931252956390381}
+2024-04-18 14:30:28,962 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBIwMjk0QjkxRTU3MEJGOEZCRjYA', 'status': 'sent', 'timestamp': '1713457924', 'recipient_id': '18493445928', 'conversation': {'id': 'bb0af204be021856462054b91f4804f8', 'origin': {'type': 'utility'}, 'expiration_timestamp': '1713544380'}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'utility'}}]}, 'field': 'messages'}]}]}
+2024-04-18 14:30:28,962 - INFO - Actualización de estado: sent
+2024-04-18 14:30:29,599 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:30:29,867 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:30:29,868 - INFO - {'event': 'webhook_processed', 'duration': 0.9065361022949219}
+2024-04-18 14:30:29,868 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.9065361022949219}
+2024-04-18 14:32:53,569 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBI3Rjc4NzI5N0FDQUVFN0ZERDIA', 'status': 'delivered', 'timestamp': '1713051643', 'recipient_id': '18493445928', 'conversation': {'id': '793f07a281a6e518024bf8695c9863d8', 'origin': {'type': 'service'}, 'expiration_timestamp': None}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'service'}}]}, 'field': 'messages'}]}]}
+2024-04-18 14:32:53,571 - INFO - Actualización de estado: delivered
+2024-04-18 14:32:54,210 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:32:54,445 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:32:54,446 - INFO - {'event': 'webhook_processed', 'duration': 0.8766248226165771}
+2024-04-18 14:32:54,447 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.8781290054321289}
+2024-04-18 14:47:14,855 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBIwMjk0QjkxRTU3MEJGOEZCRjYA', 'status': 'delivered', 'timestamp': '1713457925', 'recipient_id': '18493445928', 'conversation': {'id': 'bb0af204be021856462054b91f4804f8', 'origin': {'type': 'utility'}, 'expiration_timestamp': None}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'utility'}}]}, 'field': 'messages'}]}]}
+2024-04-18 14:47:14,856 - INFO - Actualización de estado: delivered
+2024-04-18 14:47:15,160 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:47:15,415 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:47:15,416 - INFO - {'event': 'webhook_processed', 'duration': 0.5611042976379395}
+2024-04-18 14:47:15,418 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.5631103515625}
+2024-04-18 14:47:22,773 - INFO - #################################Inicializando API...#################################
+2024-04-18 14:47:25,609 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBIzMzMyRTM1NzJENUZFMDExOUMA', 'status': 'delivered', 'timestamp': '1713055753', 'recipient_id': '18493445928', 'conversation': {'id': '793f07a281a6e518024bf8695c9863d8', 'origin': {'type': 'service'}, 'expiration_timestamp': None}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'service'}}]}, 'field': 'messages'}]}]}
+2024-04-18 14:47:25,609 - INFO - None
+2024-04-18 14:47:25,609 - INFO - Actualización de estado: delivered
+2024-04-18 14:47:25,929 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:47:26,149 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:47:26,150 - INFO - {'event': 'webhook_processed', 'duration': 0.5405597686767578}
+2024-04-18 14:47:26,150 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.5415596961975098}
+2024-04-18 14:47:43,658 - INFO - #################################Inicializando API...#################################
+2024-04-18 14:52:59,434 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': [{'profile': {'name': 'Luis Tijera'}, 'wa_id': '18297712795'}], 'messages': [{'from_': '18297712795', 'id': 'wamid.HBgLMTgyOTc3MTI3OTUVAgASGCBCOThEMERDRkQ4QTlGNzE1QkY5NTk0RTE3MzRCMDdFQgA=', 'timestamp': 1712876457, 'type': 'audio', 'text': None, 'image': None, 'audio': {'mime_type': 'audio/ogg; codecs=opus', 'sha256': 'lEeXOvv+icfd7py+AAtLrMze/tSyZNcTJMCkr5zHKfY=', 'id': '995585178566117', 'caption': None}, 'video': None, 'document': None}], 'statuses': None}, 'field': 'messages'}]}]}
+2024-04-18 14:52:59,434 - INFO - None
+2024-04-18 14:52:59,435 - INFO - Procesando mensaje de tipo 'audio' con media_id '995585178566117'
+2024-04-18 14:52:59,435 - INFO - Processing media message: 995585178566117
+2024-04-18 14:52:59,435 - INFO - Fetching media URL for media_id: 995585178566117
+2024-04-18 14:53:00,568 - INFO - HTTP Request: GET https://graph.facebook.com/v18.0/995585178566117 "HTTP/1.1 200 OK"
+2024-04-18 14:53:00,569 - INFO - Media URL fetched successfully
+2024-04-18 14:53:00,570 - INFO - Saving media, media_id: 995585178566117, media_type: audio
+2024-04-18 14:53:01,686 - INFO - HTTP Request: GET https://lookaside.fbsbx.com/whatsapp_business/attachments/?mid=995585178566117&ext=1713466683&hash=ATvdsLnYzQx38URNVow2YDcNbolGVPk6kG1zHbj0oiqSKA "HTTP/1.1 200 OK"
+2024-04-18 14:53:01,739 - INFO - Media downloaded and saved at: ./media/audio/995585178566117.ogg
+2024-04-18 14:53:01,739 - INFO - Media saved successfully at ./media/audio/995585178566117.ogg
+2024-04-18 14:53:01,740 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 14:53:02,404 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:53:02,645 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:53:02,646 - INFO - {'event': 'webhook_processed', 'duration': 3.2117605209350586}
+2024-04-18 14:53:02,647 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 3.2142698764801025}
+2024-04-18 14:55:11,501 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBIzMzMyRTM1NzJENUZFMDExOUMA', 'status': 'sent', 'timestamp': '1713055753', 'recipient_id': '18493445928', 'conversation': {'id': '793f07a281a6e518024bf8695c9863d8', 'origin': {'type': 'service'}, 'expiration_timestamp': '1713136800'}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'service'}}]}, 'field': 'messages'}]}]}
+2024-04-18 14:55:11,502 - INFO - None
+2024-04-18 14:55:11,502 - INFO - Actualización de estado: sent
+2024-04-18 14:55:12,180 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 14:55:12,400 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 14:55:12,401 - INFO - {'event': 'webhook_processed', 'duration': 0.8993899822235107}
+2024-04-18 14:55:12,401 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.9004483222961426}
+2024-04-18 15:00:31,685 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': [{'profile': {'name': 'Tico'}, 'wa_id': '18296379518'}], 'messages': [{'from_': '18296379518', 'id': 'wamid.HBgLMTgyOTYzNzk1MTgVAgASGBYzRUIwQTdCM0Q4NTFCMDA1N0FFOTM1AA==', 'timestamp': 1713456753, 'type': 'text', 'text': {'body': '.'}, 'image': None, 'audio': None, 'video': None, 'document': None}], 'statuses': None}, 'field': 'messages'}]}]}
+2024-04-18 15:00:31,686 - INFO - None
+2024-04-18 15:00:31,687 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 15:00:31,687 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 15:00:32,370 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:00:32,611 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:00:32,612 - INFO - {'event': 'webhook_processed', 'duration': 0.9270987510681152}
+2024-04-18 15:00:32,613 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.9286010265350342}
+2024-04-18 15:06:51,716 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBI3QUYyOTVENjY5QzdDOUNFMkIA', 'status': 'sent', 'timestamp': '1713050372', 'recipient_id': '18493445928', 'conversation': {'id': '793f07a281a6e518024bf8695c9863d8', 'origin': {'type': 'service'}, 'expiration_timestamp': '1713136800'}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'service'}}]}, 'field': 'messages'}]}]}
+2024-04-18 15:06:51,717 - INFO - None
+2024-04-18 15:06:51,717 - INFO - Actualización de estado: sent
+2024-04-18 15:06:52,379 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:06:52,616 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:06:52,617 - INFO - {'event': 'webhook_processed', 'duration': 0.9010438919067383}
+2024-04-18 15:06:52,618 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.9037747383117676}
+2024-04-18 15:08:47,589 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': [{'from_': '18493560712', 'id': 'wamid.HBgLMTg0OTM1NjA3MTIVAgASGBJEMDNGRjE3OEUxRThENTA1ODUA', 'timestamp': 1712876458, 'type': 'system', 'text': None, 'image': None, 'audio': None, 'video': None, 'document': None}], 'statuses': None}, 'field': 'messages'}]}]}
+2024-04-18 15:08:47,590 - INFO - None
+2024-04-18 15:08:47,591 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'system'
+2024-04-18 15:08:47,591 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 15:08:48,267 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:08:48,494 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:08:48,495 - INFO - {'event': 'webhook_processed', 'duration': 0.9059858322143555}
+2024-04-18 15:08:48,495 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.9064912796020508}
+2024-04-18 15:10:26,235 - INFO - #################################Inicializando API...#################################
+2024-04-18 15:11:27,524 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBJENjI2MjZFNjJEMEY1MEIzOTAA', 'status': 'failed', 'timestamp': '1713137090', 'recipient_id': '18493445928', 'conversation': None, 'pricing': None}]}, 'field': 'messages'}]}]}
+2024-04-18 15:11:27,525 - INFO - None
+2024-04-18 15:11:27,525 - INFO - Actualización de estado: failed
+2024-04-18 15:11:28,185 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:11:28,436 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:11:28,437 - INFO - {'event': 'webhook_processed', 'duration': 0.9125330448150635}
+2024-04-18 15:11:28,437 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.9135334491729736}
+2024-04-18 15:12:10,204 - ERROR - Ha ocurrido un error no manejado: 'EmailSchema' object has no attribute 'attachments'
+2024-04-18 15:12:10,205 - INFO - {'url': '/send-email', 'method': 'POST', 'process_time': 0.012845754623413086}
+2024-04-18 15:12:33,992 - INFO - #################################Inicializando API...#################################
+2024-04-18 15:12:39,863 - ERROR - Ha ocurrido un error no manejado: Object of type EmailAttachment is not JSON serializable
+2024-04-18 15:12:39,865 - INFO - {'url': '/send-email', 'method': 'POST', 'process_time': 0.00965118408203125}
+2024-04-18 15:14:15,593 - INFO - #################################Inicializando API...#################################
+2024-04-18 15:14:20,759 - INFO - {'url': '/send-email', 'method': 'POST', 'process_time': 0.8171710968017578}
+2024-04-18 15:15:11,919 - INFO - {'url': '/send-email', 'method': 'POST', 'process_time': 0.0010006427764892578}
+2024-04-18 15:15:18,808 - INFO - {'url': '/send-email', 'method': 'POST', 'process_time': 0.7501108646392822}
+2024-04-18 15:15:48,928 - INFO - {'url': '/send-email', 'method': 'POST', 'process_time': 0.8075940608978271}
+2024-04-18 15:18:26,614 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBI3M0ExRkI4MDRCRTc5MDNDQTYA', 'status': 'failed', 'timestamp': '1713137092', 'recipient_id': '18493445928', 'conversation': None, 'pricing': None}]}, 'field': 'messages'}]}]}
+2024-04-18 15:18:26,616 - INFO - None
+2024-04-18 15:18:26,616 - INFO - Actualización de estado: failed
+2024-04-18 15:18:26,924 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:18:27,142 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:18:27,143 - INFO - {'event': 'webhook_processed', 'duration': 0.5290708541870117}
+2024-04-18 15:18:27,144 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.5319037437438965}
+2024-04-18 15:18:39,904 - INFO - None
+2024-04-18 15:18:39,904 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 15:18:39,905 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 15:18:40,228 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:18:40,406 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:18:40,408 - INFO - {'event': 'webhook_processed', 'duration': 0.5200304985046387}
+2024-04-18 15:18:40,409 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.521259069442749}
+2024-04-18 15:19:43,670 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBJBNENGQzI0MkNFOUE3QTkzREIA', 'status': 'sent', 'timestamp': '1713456479', 'recipient_id': '18493445928', 'conversation': {'id': '29d7a0258302c718f1364e8ed0f4680f', 'origin': {'type': 'service'}, 'expiration_timestamp': '1713540540'}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'service'}}]}, 'field': 'messages'}]}]}
+2024-04-18 15:19:43,670 - INFO - None
+2024-04-18 15:19:43,670 - INFO - Actualización de estado: sent
+2024-04-18 15:19:43,983 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:19:44,219 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:19:44,220 - INFO - {'event': 'webhook_processed', 'duration': 0.5503730773925781}
+2024-04-18 15:19:44,220 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.5508759021759033}
+2024-04-18 15:21:36,065 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBJGMjYwRTlERTFDNDA1Q0RFMEYA', 'status': 'delivered', 'timestamp': '1713055022', 'recipient_id': '18493445928', 'conversation': {'id': '793f07a281a6e518024bf8695c9863d8', 'origin': {'type': 'service'}, 'expiration_timestamp': None}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'service'}}]}, 'field': 'messages'}]}]}
+2024-04-18 15:21:36,066 - INFO - None
+2024-04-18 15:21:36,066 - INFO - Actualización de estado: delivered
+2024-04-18 15:21:36,396 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:21:36,616 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:21:36,617 - INFO - {'event': 'webhook_processed', 'duration': 0.5517838001251221}
+2024-04-18 15:21:36,618 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.5533971786499023}
+2024-04-18 15:23:21,638 - INFO - None
+2024-04-18 15:23:21,638 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 15:23:21,638 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 15:23:21,952 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:23:22,165 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:23:22,166 - INFO - {'event': 'webhook_processed', 'duration': 0.5340728759765625}
+2024-04-18 15:23:22,166 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.5346066951751709}
+2024-04-18 15:28:35,263 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBJGMjYwRTlERTFDNDA1Q0RFMEYA', 'status': 'sent', 'timestamp': '1713055022', 'recipient_id': '18493445928', 'conversation': {'id': '793f07a281a6e518024bf8695c9863d8', 'origin': {'type': 'service'}, 'expiration_timestamp': '1713136800'}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'service'}}]}, 'field': 'messages'}]}]}
+2024-04-18 15:28:35,263 - INFO - None
+2024-04-18 15:28:35,263 - INFO - Actualización de estado: sent
+2024-04-18 15:28:35,573 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:28:35,804 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:28:35,804 - INFO - {'event': 'webhook_processed', 'duration': 0.5426909923553467}
+2024-04-18 15:28:35,805 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.5436911582946777}
+2024-04-18 15:29:11,119 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBI3Rjc4NzI5N0FDQUVFN0ZERDIA', 'status': 'delivered', 'timestamp': '1713051645', 'recipient_id': '18493445928', 'conversation': {'id': '793f07a281a6e518024bf8695c9863d8', 'origin': {'type': 'service'}, 'expiration_timestamp': None}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'service'}}]}, 'field': 'messages'}]}]}
+2024-04-18 15:29:11,120 - INFO - None
+2024-04-18 15:29:11,120 - INFO - Actualización de estado: delivered
+2024-04-18 15:29:11,420 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:29:11,596 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:29:11,597 - INFO - {'event': 'webhook_processed', 'duration': 0.47745466232299805}
+2024-04-18 15:29:11,597 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.4780457019805908}
+2024-04-18 15:30:30,623 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBIyQzlFN0MwNzkxRjY3NzRBMjkA', 'status': 'failed', 'timestamp': '1713137093', 'recipient_id': '18493445928', 'conversation': None, 'pricing': None}]}, 'field': 'messages'}]}]}
+2024-04-18 15:30:30,624 - INFO - None
+2024-04-18 15:30:30,624 - INFO - Actualización de estado: failed
+2024-04-18 15:30:30,940 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:30:31,209 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:30:31,210 - INFO - {'event': 'webhook_processed', 'duration': 0.5868203639984131}
+2024-04-18 15:30:31,210 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.5873644351959229}
+2024-04-18 15:32:14,627 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': [{'profile': {'name': 'Sergio R'}, 'wa_id': '18493445928'}], 'messages': [{'from_': '18493445928', 'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgASGBJDMUYzQTMzMzg4MDhGRDFDRDUA', 'timestamp': 1713050052, 'type': 'text', 'text': {'body': '.'}, 'image': None, 'audio': None, 'video': None, 'document': None}], 'statuses': None}, 'field': 'messages'}]}]}
+2024-04-18 15:32:14,628 - INFO - None
+2024-04-18 15:32:14,628 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 15:32:14,628 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 15:32:14,941 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:32:15,178 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:32:15,180 - INFO - {'event': 'webhook_processed', 'duration': 0.5517983436584473}
+2024-04-18 15:32:15,180 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.5533468723297119}
+2024-04-18 15:33:28,166 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': [{'profile': {'name': 'Sergio R'}, 'wa_id': '18493445928'}], 'messages': [{'from_': '18493445928', 'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgASGBIzN0Q1QTA4NEMwMUM1NzFBMDkA', 'timestamp': 1713137286, 'type': 'text', 'text': {'body': 't'}, 'image': None, 'audio': None, 'video': None, 'document': None}], 'statuses': None}, 'field': 'messages'}]}]}
+2024-04-18 15:33:28,166 - INFO - None
+2024-04-18 15:33:28,166 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 15:33:28,166 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 15:33:28,468 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:33:28,732 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:33:28,733 - INFO - {'event': 'webhook_processed', 'duration': 0.5672042369842529}
+2024-04-18 15:33:28,733 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.5677073001861572}
+2024-04-18 15:35:03,800 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBIyMjIzMEY5OTdCMDUxQjBEQkUA', 'status': 'failed', 'timestamp': '1713137162', 'recipient_id': '18493445928', 'conversation': None, 'pricing': None}]}, 'field': 'messages'}]}]}
+2024-04-18 15:35:03,800 - INFO - None
+2024-04-18 15:35:03,800 - INFO - Actualización de estado: failed
+2024-04-18 15:35:04,113 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:35:04,353 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:35:04,355 - INFO - {'event': 'webhook_processed', 'duration': 0.5550844669342041}
+2024-04-18 15:35:04,355 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.5556118488311768}
+2024-04-18 15:39:02,967 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBIyQzBENEQzRTI1NDMzODI0N0QA', 'status': 'sent', 'timestamp': '1713137291', 'recipient_id': '18493445928', 'conversation': {'id': '14b142b1387be162f79d632101a42697', 'origin': {'type': 'service'}, 'expiration_timestamp': '1713223740'}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'service'}}]}, 'field': 'messages'}]}]}
+2024-04-18 15:39:02,968 - INFO - None
+2024-04-18 15:39:02,968 - INFO - Actualización de estado: sent
+2024-04-18 15:39:03,269 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:39:03,503 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:39:03,504 - INFO - {'event': 'webhook_processed', 'duration': 0.5372059345245361}
+2024-04-18 15:39:03,504 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.5380032062530518}
+2024-04-18 15:39:42,818 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBIwMjk0QjkxRTU3MEJGOEZCRjYA', 'status': 'delivered', 'timestamp': '1713457927', 'recipient_id': '18493445928', 'conversation': {'id': 'bb0af204be021856462054b91f4804f8', 'origin': {'type': 'utility'}, 'expiration_timestamp': None}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'utility'}}]}, 'field': 'messages'}]}]}
+2024-04-18 15:39:42,818 - INFO - None
+2024-04-18 15:39:42,818 - INFO - Actualización de estado: delivered
+2024-04-18 15:39:43,119 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:39:43,312 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:39:43,313 - INFO - {'event': 'webhook_processed', 'duration': 0.4952888488769531}
+2024-04-18 15:39:43,313 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.4958229064941406}
+2024-04-18 15:40:02,566 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBIyQzBENEQzRTI1NDMzODI0N0QA', 'status': 'delivered', 'timestamp': '1713137293', 'recipient_id': '18493445928', 'conversation': {'id': '14b142b1387be162f79d632101a42697', 'origin': {'type': 'service'}, 'expiration_timestamp': None}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'service'}}]}, 'field': 'messages'}]}]}
+2024-04-18 15:40:02,567 - INFO - None
+2024-04-18 15:40:02,567 - INFO - Actualización de estado: delivered
+2024-04-18 15:40:02,870 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:40:03,069 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:40:03,070 - INFO - {'event': 'webhook_processed', 'duration': 0.5043935775756836}
+2024-04-18 15:40:03,070 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.505516767501831}
+2024-04-18 15:41:35,718 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBI3QUYyOTVENjY5QzdDOUNFMkIA', 'status': 'delivered', 'timestamp': '1713050375', 'recipient_id': '18493445928', 'conversation': {'id': '793f07a281a6e518024bf8695c9863d8', 'origin': {'type': 'service'}, 'expiration_timestamp': None}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'service'}}]}, 'field': 'messages'}]}]}
+2024-04-18 15:41:35,719 - INFO - None
+2024-04-18 15:41:35,719 - INFO - Actualización de estado: delivered
+2024-04-18 15:41:36,045 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:41:36,303 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:41:36,304 - INFO - {'event': 'webhook_processed', 'duration': 0.5858922004699707}
+2024-04-18 15:41:36,305 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.5869779586791992}
+2024-04-18 15:44:19,945 - INFO - None
+2024-04-18 15:44:19,945 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 15:44:19,946 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 15:44:20,630 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:44:20,874 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:44:20,876 - INFO - {'event': 'webhook_processed', 'duration': 0.9419186115264893}
+2024-04-18 15:44:20,876 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.9424211978912354}
+2024-04-18 15:47:35,714 - INFO - None
+2024-04-18 15:47:35,714 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 15:47:35,715 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 15:47:36,048 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:47:36,288 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:47:36,289 - INFO - {'event': 'webhook_processed', 'duration': 0.5825119018554688}
+2024-04-18 15:47:36,289 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.583277702331543}
+2024-04-18 15:47:39,809 - INFO - None
+2024-04-18 15:47:39,810 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 15:47:39,810 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 15:47:40,135 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:47:40,331 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:47:40,332 - INFO - {'event': 'webhook_processed', 'duration': 0.5319795608520508}
+2024-04-18 15:47:40,332 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.5325813293457031}
+2024-04-18 15:47:42,087 - INFO - None
+2024-04-18 15:47:42,087 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 15:47:42,087 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 15:47:42,403 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:47:42,584 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:47:42,584 - INFO - {'event': 'webhook_processed', 'duration': 0.5038745403289795}
+2024-04-18 15:47:42,585 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.5048737525939941}
+2024-04-18 15:47:52,745 - INFO - None
+2024-04-18 15:47:52,746 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 15:47:52,746 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 15:47:53,050 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:47:53,251 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:47:53,252 - INFO - {'event': 'webhook_processed', 'duration': 0.5111448764801025}
+2024-04-18 15:47:53,252 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.5117201805114746}
+2024-04-18 15:47:54,510 - INFO - None
+2024-04-18 15:47:54,510 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 15:47:54,510 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 15:47:54,816 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:47:55,015 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:47:55,016 - INFO - {'event': 'webhook_processed', 'duration': 0.5103199481964111}
+2024-04-18 15:47:55,016 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.5103199481964111}
+2024-04-18 15:47:57,255 - INFO - None
+2024-04-18 15:47:57,256 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 15:47:57,256 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 15:47:57,572 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:47:57,751 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:47:57,751 - INFO - {'event': 'webhook_processed', 'duration': 0.5046093463897705}
+2024-04-18 15:47:57,751 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.5067157745361328}
+2024-04-18 15:50:12,441 - INFO - #################################Inicializando API...#################################
+2024-04-18 15:50:29,708 - INFO - #################################Inicializando API...#################################
+2024-04-18 15:54:35,185 - INFO - #################################Inicializando API...#################################
+2024-04-18 15:57:57,600 - INFO - #################################Inicializando API...#################################
+2024-04-18 15:58:07,126 - INFO - #################################Inicializando API...#################################
+2024-04-18 15:58:07,130 - INFO - API is starting up.
+2024-04-18 15:59:50,918 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 15:59:50,918 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 15:59:51,251 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:59:51,520 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:59:51,521 - INFO - {'event': 'webhook_processed', 'duration': 0.6191718578338623}
+2024-04-18 15:59:51,522 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.6201725006103516}
+2024-04-18 15:59:53,266 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 15:59:53,267 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 15:59:53,597 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:59:53,813 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:59:53,814 - INFO - {'event': 'webhook_processed', 'duration': 0.555488109588623}
+2024-04-18 15:59:53,814 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.555488109588623}
+2024-04-18 15:59:55,076 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 15:59:55,077 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 15:59:55,397 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 15:59:55,575 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 15:59:55,576 - INFO - {'event': 'webhook_processed', 'duration': 0.5083239078521729}
+2024-04-18 15:59:55,576 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.5104351043701172}
+2024-04-18 16:00:01,902 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 16:00:01,902 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 16:00:02,648 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 16:00:02,831 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 16:00:02,832 - INFO - {'event': 'webhook_processed', 'duration': 0.940906286239624}
+2024-04-18 16:00:02,833 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.9432296752929688}
+2024-04-18 16:00:03,567 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 16:00:03,567 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 16:00:04,487 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 16:00:04,689 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 16:00:04,690 - INFO - {'event': 'webhook_processed', 'duration': 1.1332225799560547}
+2024-04-18 16:00:04,691 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 1.1342217922210693}
+2024-04-18 16:00:05,978 - WARNING - Mensaje recibido sin media_id. Tipo de mensaje: 'text'
+2024-04-18 16:00:05,979 - INFO - Todas las tareas procesadas con éxito.
+2024-04-18 16:00:06,729 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 16:00:06,964 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 16:00:06,964 - INFO - {'event': 'webhook_processed', 'duration': 0.9952871799468994}
+2024-04-18 16:00:06,965 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.9972879886627197}
+2024-04-18 16:00:10,556 - INFO - API is shutting down.
+2024-04-18 16:00:11,431 - INFO - #################################Inicializando API...#################################
+2024-04-18 16:03:17,030 - INFO - #################################Inicializando API...#################################
+2024-04-18 16:03:48,331 - INFO - #################################Inicializando API...#################################
+2024-04-18 16:04:58,130 - INFO - #################################Inicializando API...#################################
+2024-04-18 16:13:16,499 - INFO - #################################Inicializando API...#################################

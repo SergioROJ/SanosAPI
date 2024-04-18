@@ -2,13 +2,13 @@ import os
 import requests
 import asyncio
 import tweepy
-import logging
 import aiofiles
 from fastapi import APIRouter, HTTPException, status
 from fastapi.responses import JSONResponse
 from models import SendMessageRequest, IncomingMessage, SendMessageTemplateRequest, Component, EmailSchema, EmailRecipient, TweetRequest, TwitterDMRequest
 from config import Config
 from custom_metrics import CustomMetricsPrometheus
+from logger import logger
 import httpx
 from httpx import HTTPError, AsyncClient, HTTPStatusError, ConnectTimeout
 from typing import Optional
@@ -18,6 +18,7 @@ from mailjet_rest import Client
 import mailjet_rest
 from pydantic import ValidationError
 import prometheus_client
+import time
 
 router = APIRouter()
 
@@ -103,7 +104,7 @@ async def send_message(message_request: SendMessageRequest):
     o para capturar y manejar errores en caso de que la solicitud no se complete satisfactoriamente.
     """
     # Registro inicial para indicar el comienzo del proceso de envío.
-    logging.info(f"Sending message to recipient_number: {message_request.recipient_number}")
+    logger.info(f"Sending message to recipient_number: {message_request.recipient_number}")
     
     try:
         # Envío de la solicitud POST a la API de WhatsApp.
@@ -122,15 +123,15 @@ async def send_message(message_request: SendMessageRequest):
         CustomMetricsPrometheus.Cantidad_mensajes_whatsapp_enviados.inc(1)
 
         # Registro de éxito al enviar el mensaje.
-        logging.info("Message sent successfully")
+        logger.info("Message sent successfully")
         return {"status": "success", "message": "Message sent"}
     except HTTPError as http_err:
         # Captura y manejo de errores relacionados con la solicitud HTTP.
-        logging.error(f"Failed to send message, status code: {http_err.response.status_code}")
+        logger.error(f"Failed to send message, status code: {http_err.response.status_code}")
         raise HTTPException(status_code=http_err.response.status_code, detail="Failed to send message")
     except Exception as err:
         # Manejo de cualquier otro tipo de error no capturado específicamente.
-        logging.error(f"An unexpected error occurred while sending the message: {err}")
+        logger.error(f"An unexpected error occurred while sending the message: {err}")
         raise HTTPException(status_code=500, detail="An unexpected error occurred")
 
     
@@ -223,7 +224,7 @@ async def get_media_url(media_id: str) -> Optional[str]:
     """
     
     # Registro del intento de recuperación de la URL del medio.
-    logging.info(f"Fetching media URL for media_id: {media_id}")
+    logger.info(f"Fetching media URL for media_id: {media_id}")
     
     try:
         # Realización de la solicitud HTTP GET a la API de Facebook Graph.
@@ -235,12 +236,12 @@ async def get_media_url(media_id: str) -> Optional[str]:
         response.raise_for_status()  # Asegura lanzar una excepción para respuestas HTTP no exitosas.
 
         # Registro de éxito y extracción de la URL del medio desde la respuesta.
-        logging.info("Media URL fetched successfully")
+        logger.info("Media URL fetched successfully")
         media_url = response.json().get('url')  # Extracción de la URL del medio desde el JSON de respuesta.
         return media_url
     except Exception as e:
         # Manejo de errores durante la recuperación de la URL, incluyendo errores de red y respuestas HTTP no exitosas.
-        logging.error(f"Failed to obtain media URL, status code: {response.status_code}, error: {e}")
+        logger.error(f"Failed to obtain media URL, status code: {response.status_code}, error: {e}")
         return None
 
 
@@ -270,11 +271,11 @@ async def save_media(media_url: str, media_type: str, media_id: str, mime_type: 
     cualquier error que pueda ocurrir durante el proceso.
     """
     # Registro de inicio de la operación de guardado.
-    logging.info(f"Saving media, media_id: {media_id}, media_type: {media_type}")
+    logger.info(f"Saving media, media_id: {media_id}, media_type: {media_type}")
     
     # Verificación de la URL del medio proporcionada.
     if not media_url:
-        logging.warning(f"No media URL provided for media_id: {media_id}")
+        logger.warning(f"No media URL provided for media_id: {media_id}")
         return None
 
     # Limpieza y obtención de la extensión del archivo basada en el tipo MIME.
@@ -293,11 +294,11 @@ async def save_media(media_url: str, media_type: str, media_id: str, mime_type: 
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
         async with aiofiles.open(file_path, 'wb') as file:
             await file.write(response.content)
-        logging.info(f"Media downloaded and saved at: {file_path}")
+        logger.info(f"Media downloaded and saved at: {file_path}")
         return file_path
     except Exception as e:
         # Registro de cualquier error ocurrido durante la descarga o el guardado del medio.
-        logging.error(f"Failed to download media for media_id: {media_id}, status code: {response.status_code}, error: {e}")
+        logger.error(f"Failed to download media for media_id: {media_id}, status code: {response.status_code}, error: {e}")
         return None
 
 # Las demás funciones permanecen sin cambios significativos en su lógica interna.
@@ -328,7 +329,7 @@ async def handle_media_message(media_id: str, media_type: str, mime_type: str, f
     """
     try:
         # Registro de inicio del procesamiento para seguimiento y depuración.
-        logging.info(f"Processing media message: {media_id}")
+        logger.info(f"Processing media message: {media_id}")
 
         # Obtención de la URL del medio basado en su ID. Es necesario manejar fallos en este punto
         # ya que podría indicar problemas de conectividad o IDs incorrectos.
@@ -338,17 +339,17 @@ async def handle_media_message(media_id: str, media_type: str, mime_type: str, f
             file_path = await save_media(media_url, media_type, media_id, mime_type, filename)
             if file_path:
                 # Confirmación del guardado exitoso del medio para registro y seguimiento.
-                logging.info(f"Media saved successfully at {file_path}")
+                logger.info(f"Media saved successfully at {file_path}")
                 # Este es un buen lugar para realizar operaciones adicionales, como actualizaciones en base de datos.
             else:
                 # Manejo y registro de errores en caso de fallo al guardar el medio.
-                logging.error(f"Failed to save media for media_id: {media_id}. The file_path was not obtained.")
+                logger.error(f"Failed to save media for media_id: {media_id}. The file_path was not obtained.")
         else:
             # Registro de errores en caso de no poder obtener la URL del medio, lo cual es crítico para el proceso.
-            logging.error(f"Failed to fetch media URL for media_id: {media_id}. Check if the media_id is correct and the media is accessible.")
+            logger.error(f"Failed to fetch media URL for media_id: {media_id}. Check if the media_id is correct and the media is accessible.")
     except Exception as e:
         # Manejo general de excepciones para asegurar que cualquier error inesperado sea registrado adecuadamente.
-        logging.error(f"An error occurred while processing media message {media_id}: {e}")
+        logger.error(f"An error occurred while processing media message {media_id}: {e}")
         # La decisión de lanzar la excepción o manejarla de manera silenciosa dependerá del flujo específico de la aplicación y de la criticidad del proceso de manejo de medios.
 
 
@@ -388,16 +389,16 @@ async def process_message(message):
 
         # Proceder con el procesamiento si se presenta un ID de media, indicando un mensaje de media.
         if media_id:
-            logging.info(f"Procesando mensaje de tipo '{message.type}' con media_id '{media_id}'")
+            logger.info(f"Procesando mensaje de tipo '{message.type}' con media_id '{media_id}'")
             await handle_media_message(media_id, message.type, mime_type, filename, caption)
         else:
             # Registrar una advertencia si no se encuentra un ID de media, indicando que el mensaje puede no requerir
             # procesamiento o no ser compatible con la lógica actual.
-            logging.warning(f"Mensaje recibido sin media_id. Tipo de mensaje: '{message.type}'")
+            logger.warning(f"Mensaje recibido sin media_id. Tipo de mensaje: '{message.type}'")
     except Exception as e:
         # Registrar cualquier excepción encontrada durante el procesamiento del mensaje.
         # Esto ayuda a identificar problemas sin detener el procesamiento de mensajes subsiguientes.
-        logging.error(f"Error al procesar mensaje: {e}")
+        logger.error(f"Error al procesar mensaje: {e}")
 
 
 @router.post("/webhook", status_code=200)
@@ -418,11 +419,12 @@ async def receive_message(request: IncomingMessage):
         JSONResponse: Una respuesta HTTP indicando el resultado del procesamiento del mensaje. Devuelve un estado
                       de éxito junto con un mensaje correspondiente en caso de éxito, o un estado de error en caso de fallo.
     """
+    start = time.time()  # Iniciar timer para registro de tiempo de procesamiento
     try:
         # Conversión del cuerpo de la solicitud a un diccionario para facilitar el registro y la depuración.
         # Es importante asegurar que el modelo IncomingMessage tenga un método 'dict()' para esta conversión.
         request_data = request.model_dump()
-        logging.info(f"Evento recibido: {request_data}")
+        sanitize_log(f"Evento recibido: {request_data}")
 
         # Lista para acumular tareas asincrónicas correspondientes al procesamiento de cada mensaje.
         tasks = []
@@ -439,34 +441,38 @@ async def receive_message(request: IncomingMessage):
                         tasks.append(process_message(message))
                 elif change.value.statuses:
                     for statuses in change.value.statuses:
-                        logging.info(f"Actualización de estado: {statuses.status}")
+                        logger.info(f"Actualización de estado: {statuses.status}")
 
         # Si hay tareas programadas, se ejecutan de manera concurrente.
         # Esto es crucial para mantener la eficiencia y la capacidad de respuesta del servicio.
         if tasks:
             await asyncio.gather(*tasks)
-            logging.info("Todas las tareas procesadas con éxito.")
+            logger.info("Todas las tareas procesadas con éxito.")
 
         await send_event_notification(request)
+
+        # Registro del evento y tiempo de procesamiento antes de enviar la respuesta
+        process_time = time.time() - start
+        logger.info({'event': 'webhook_processed', 'duration': process_time})
 
         # Respuesta exitosa tras el procesamiento de los mensajes.
         return JSONResponse(
             status_code=status.HTTP_200_OK,
             content={"status": "success", "message": "Evento procesado con éxito"})
     except ConnectTimeout as e:
-        logging.error("Connection timeout")
+        logger.error("Connection timeout")
         return JSONResponse(
             status_code=status.HTTP_504_GATEWAY_TIMEOUT,
             content={"status": "error", "message": "Timeout de conexión"})
     except HTTPStatusError as e:
-        logging.error(f"Ha ocurrido un error no manejado: {e.response.status_code}")
+        logger.error(f"Ha ocurrido un error no manejado: {e.response.status_code}")
         return JSONResponse(
             status_code=status.HTTP_400_BAD_REQUEST,
             content={"status": "error", "message": "Error, favor tomar nota de la actividad enviada y comunicarse con el supldior"})
     except Exception as e:
         # Registro de cualquier excepción ocurrida durante el procesamiento.
         # Es importante capturar y registrar excepciones para facilitar la depuración y mantenimiento.
-        logging.error(f"Error al procesar el mensaje: {e}")
+        logger.error(f"Error al procesar el mensaje: {e}")
 
         # Respuesta indicando fallo en el procesamiento debido a la excepción capturada.
         # Devolver un mensaje de error específico puede ayudar en la identificación rápida del problema.
@@ -501,6 +507,9 @@ def send_email(email_data: EmailSchema):
         if email_data.bcc:
             message["Bcc"] = build_email_recipients_list(email_data.bcc)
 
+        if email_data.attachments:
+            message["Attachments"] = [attachment.model_dump() for attachment in email_data.attachments]
+
         data = {"Messages": [message]}
 
             
@@ -509,14 +518,14 @@ def send_email(email_data: EmailSchema):
             return {"message": "Email sent successfully"}
         else:
             # Log this error
-            logging.error(f"Fallo al enviar el correo: {result.json()}")
+            logger.error(f"Fallo al enviar el correo: {result.json()}")
             return JSONResponse(
                 status_code=status.HTTP_400_BAD_REQUEST,
                 content={"message": "Email failed to send", "details": result.json()}
             )
     except Exception as e:
         # Log this error
-        logging.error(f"Ha ocurrido un error no manejado: {str(e)}")
+        logger.error(f"Ha ocurrido un error no manejado: {str(e)}")
         return JSONResponse(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             content={"message": "An unexpected error occurred", "details": str(e)}
@@ -577,3 +586,9 @@ async def send_direct_message(dm_request: TwitterDMRequest):
         )
 
     return {"message": "DM sent successfully", "data": response.json()}'''
+
+def sanitize_log(data: str):
+    try:
+        logger.info(data)
+    except UnicodeEncodeError:
+        logger.info(data.encode('utf-8', errors='replace').decode('utf-8'))

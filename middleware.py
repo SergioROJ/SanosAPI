@@ -1,6 +1,7 @@
 from fastapi import Request
 from logger import logger
 import time
+import routes
 
 async def log_middleware(request: Request, call_next):
     #Se crea un timer para poder logear cuánto tarda cada request que se le hace a la API en ser completado

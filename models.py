@@ -189,6 +189,11 @@ class EmailRecipient(BaseModel):
     email: EmailStr
     name: str
 
+class EmailAttachment(BaseModel):
+    ContentType: str
+    Filename: str
+    Base64Content: str
+
 class EmailSchema(BaseModel):
     from_email: EmailStr
     from_name: str
@@ -198,7 +203,7 @@ class EmailSchema(BaseModel):
     subject: str
     text_part: str
     html_part: str
-
+    attachments: Optional[List[EmailAttachment]] = []
 
 # ****************************************
 # *                                      *
