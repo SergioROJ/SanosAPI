@@ -1,5 +1,7 @@
 # Usar la imagen oficial de Python como imagen base
-FROM python:3.9
+FROM python:3.12
+
+RUN useradd -ms /bin/sh -u 1001 app
 
 # Establecer el directorio de trabajo en el contenedor
 WORKDIR /app

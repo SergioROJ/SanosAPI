@@ -11,10 +11,15 @@ from starlette.middleware.base import BaseHTTPMiddleware
 # Carga las variables de entorno desde el archivo .env
 # Esto es útil para mantener configuraciones sensibles o específicas del entorno fuera del código fuente
 load_dotenv()
-
+print("tes2t")
+print("tes3t")
 # Crea una instancia de la aplicación FastAPI
 app = FastAPI()
+
 app.add_middleware(BaseHTTPMiddleware, dispatch = log_middleware)
+logger.info(f"#################################Inicializando API...#################################")
+logger.info(f"#################################Inicializando API...#################################")
+logger.info(f"#################################Inicializando API...#################################")
 logger.info(f"#################################Inicializando API...#################################")
 
 

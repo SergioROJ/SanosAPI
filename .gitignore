@@ -4,6 +4,7 @@ emails.py
 directorio.txt
 bp/
 conversiones/
+trash/
 # Ignorar todo dentro de las subcarpetas de media, pero incluir las carpetas
 media/image/**
 media/audio/**

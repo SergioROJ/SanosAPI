@@ -592,3 +592,120 @@ prueba
 2024-04-18 16:03:48,331 - INFO - #################################Inicializando API...#################################
 2024-04-18 16:04:58,130 - INFO - #################################Inicializando API...#################################
 2024-04-18 16:13:16,499 - INFO - #################################Inicializando API...#################################
+2024-04-18 22:00:07,270 - INFO - #################################Inicializando API...#################################
+2024-04-18 22:00:53,475 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0014727115631103516}
+2024-04-18 22:01:05,684 - INFO - #################################Inicializando API...#################################
+2024-04-18 22:01:05,684 - INFO - #################################Inicializando API...#################################
+2024-04-18 22:01:32,749 - INFO - #################################Inicializando API...#################################
+2024-04-18 22:01:32,749 - INFO - #################################Inicializando API...#################################
+2024-04-18 22:01:32,749 - INFO - #################################Inicializando API...#################################
+2024-04-18 22:01:43,474 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0025916099548339844}
+2024-04-18 22:01:58,739 - INFO - #################################Inicializando API...#################################
+2024-04-18 22:01:58,739 - INFO - #################################Inicializando API...#################################
+2024-04-18 22:01:58,740 - INFO - #################################Inicializando API...#################################
+2024-04-18 22:01:58,741 - INFO - #################################Inicializando API...#################################
+2024-04-18 22:02:33,475 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0015006065368652344}
+2024-04-18 22:03:23,470 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0019214153289794922}
+2024-04-18 22:04:13,469 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0011763572692871094}
+2024-04-18 22:05:03,468 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0015265941619873047}
+2024-04-18 22:05:53,465 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0011370182037353516}
+2024-04-18 22:06:43,465 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0012841224670410156}
+2024-04-18 22:07:33,464 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0011355876922607422}
+2024-04-18 22:08:23,462 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0011546611785888672}
+2024-04-18 22:09:13,460 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0011928081512451172}
+2024-04-18 22:10:03,460 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0012888908386230469}
+2024-04-18 22:10:53,458 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0011234283447265625}
+2024-04-18 22:11:43,457 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0011219978332519531}
+2024-04-18 22:12:33,456 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0010814666748046875}
+2024-04-18 22:13:23,452 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0012912750244140625}
+2024-04-18 22:14:13,452 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.001253366470336914}
+2024-04-18 22:15:03,452 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0013353824615478516}
+2024-04-18 22:15:53,450 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0011212825775146484}
+2024-04-18 22:16:43,449 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0012159347534179688}
+2024-04-18 22:17:33,448 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.001100778579711914}
+2024-04-18 22:18:23,446 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0011513233184814453}
+2024-04-18 22:19:13,442 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0011086463928222656}
+2024-04-18 22:20:03,444 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0012946128845214844}
+2024-04-18 22:20:53,443 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.001165628433227539}
+2024-04-18 22:21:43,442 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0012402534484863281}
+2024-04-18 22:21:51,629 - INFO - Sending message to recipient_number: 18493445928
+2024-04-18 22:21:52,323 - INFO - HTTP Request: POST https://graph.facebook.com/v18.0/230985623437689/messages "HTTP/1.1 200 OK"
+2024-04-18 22:21:52,324 - INFO - Message sent successfully
+2024-04-18 22:21:52,325 - INFO - {'url': '/send-message', 'method': 'POST', 'process_time': 0.6959025859832764}
+2024-04-18 22:21:52,904 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBI0MjFCMDBEQTRDMERBODlFODMA', 'status': 'delivered', 'timestamp': '1713478916', 'recipient_id': '18493445928', 'conversation': {'id': 'bb0af204be021856462054b91f4804f8', 'origin': {'type': 'utility'}, 'expiration_timestamp': None}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'utility'}}]}, 'field': 'messages'}]}]}
+2024-04-18 22:21:52,905 - INFO - Actualización de estado: delivered
+2024-04-18 22:21:52,920 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 22:21:52,924 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBI0MjFCMDBEQTRDMERBODlFODMA', 'status': 'sent', 'timestamp': '1713478915', 'recipient_id': '18493445928', 'conversation': {'id': 'bb0af204be021856462054b91f4804f8', 'origin': {'type': 'utility'}, 'expiration_timestamp': '1713544380'}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'utility'}}]}, 'field': 'messages'}]}]}
+2024-04-18 22:21:52,925 - INFO - Actualización de estado: sent
+2024-04-18 22:21:52,941 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 22:21:53,209 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 22:21:53,210 - INFO - {'event': 'webhook_processed', 'duration': 0.2859501838684082}
+2024-04-18 22:21:53,211 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 22:21:53,212 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.2897624969482422}
+2024-04-18 22:21:53,213 - INFO - {'event': 'webhook_processed', 'duration': 0.30953001976013184}
+2024-04-18 22:21:53,214 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.3111400604248047}
+2024-04-18 22:22:33,442 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0021185874938964844}
+2024-04-18 22:23:23,438 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.001401662826538086}
+2024-04-18 22:23:42,619 - INFO - Sending message to recipient_number: 18493445928
+2024-04-18 22:23:43,182 - INFO - HTTP Request: POST https://graph.facebook.com/v18.0/230985623437689/messages "HTTP/1.1 200 OK"
+2024-04-18 22:23:43,183 - INFO - Message sent successfully
+2024-04-18 22:23:43,185 - INFO - {'url': '/send-message', 'method': 'POST', 'process_time': 0.5656147003173828}
+2024-04-18 22:23:43,610 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBI2NzVBMEQ1REZBNzM1MjhGMTUA', 'status': 'sent', 'timestamp': '1713479026', 'recipient_id': '18493445928', 'conversation': {'id': 'bb0af204be021856462054b91f4804f8', 'origin': {'type': 'utility'}, 'expiration_timestamp': '1713544380'}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'utility'}}]}, 'field': 'messages'}]}]}
+2024-04-18 22:23:43,610 - INFO - Actualización de estado: sent
+2024-04-18 22:23:43,625 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 22:23:43,725 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBI2NzVBMEQ1REZBNzM1MjhGMTUA', 'status': 'delivered', 'timestamp': '1713479026', 'recipient_id': '18493445928', 'conversation': {'id': 'bb0af204be021856462054b91f4804f8', 'origin': {'type': 'utility'}, 'expiration_timestamp': None}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'utility'}}]}, 'field': 'messages'}]}]}
+2024-04-18 22:23:43,726 - INFO - Actualización de estado: delivered
+2024-04-18 22:23:43,741 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 22:23:43,889 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 22:23:43,892 - INFO - {'event': 'webhook_processed', 'duration': 0.28238797187805176}
+2024-04-18 22:23:43,893 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.2840456962585449}
+2024-04-18 22:23:43,962 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 22:23:43,963 - INFO - {'event': 'webhook_processed', 'duration': 0.23778414726257324}
+2024-04-18 22:23:43,964 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.2391984462738037}
+2024-04-18 22:23:44,268 - INFO - Sending message to recipient_number: 18493445928
+2024-04-18 22:23:44,755 - INFO - HTTP Request: POST https://graph.facebook.com/v18.0/230985623437689/messages "HTTP/1.1 200 OK"
+2024-04-18 22:23:44,757 - INFO - Message sent successfully
+2024-04-18 22:23:44,757 - INFO - {'url': '/send-message', 'method': 'POST', 'process_time': 0.4897124767303467}
+2024-04-18 22:23:45,163 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBI2MjIyMzdGQTAzMkRDMjc2NDMA', 'status': 'sent', 'timestamp': '1713479028', 'recipient_id': '18493445928', 'conversation': {'id': 'bb0af204be021856462054b91f4804f8', 'origin': {'type': 'utility'}, 'expiration_timestamp': '1713544380'}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'utility'}}]}, 'field': 'messages'}]}]}
+2024-04-18 22:23:45,164 - INFO - Actualización de estado: sent
+2024-04-18 22:23:45,181 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 22:23:45,263 - INFO - Evento recibido: {'object': 'whatsapp_business_account', 'entry': [{'id': '290942844094346', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '18098869031', 'phone_number_id': '230985623437689'}, 'contacts': None, 'messages': None, 'statuses': [{'id': 'wamid.HBgLMTg0OTM0NDU5MjgVAgARGBI2MjIyMzdGQTAzMkRDMjc2NDMA', 'status': 'delivered', 'timestamp': '1713479028', 'recipient_id': '18493445928', 'conversation': {'id': 'bb0af204be021856462054b91f4804f8', 'origin': {'type': 'utility'}, 'expiration_timestamp': None}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'utility'}}]}, 'field': 'messages'}]}]}
+2024-04-18 22:23:45,263 - INFO - Actualización de estado: delivered
+2024-04-18 22:23:45,278 - INFO - ESTA ES LA URL CLIENTE>>>>>>>>> https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook
+2024-04-18 22:23:45,398 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 22:23:45,399 - INFO - {'event': 'webhook_processed', 'duration': 0.23606395721435547}
+2024-04-18 22:23:45,400 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.23775053024291992}
+2024-04-18 22:23:45,493 - INFO - HTTP Request: POST https://0e6f-2001-1308-2d10-d000-6180-9312-ea7e-92ef.ngrok-free.app/webhook "HTTP/1.1 404 Not Found"
+2024-04-18 22:23:45,495 - INFO - {'event': 'webhook_processed', 'duration': 0.23184418678283691}
+2024-04-18 22:23:45,496 - INFO - {'url': '/webhook', 'method': 'POST', 'process_time': 0.23343491554260254}
+2024-04-18 22:24:13,438 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0013010501861572266}
+2024-04-18 22:25:03,438 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0014743804931640625}
+2024-04-18 22:25:53,436 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0013110637664794922}
+2024-04-18 22:26:43,435 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0014896392822265625}
+2024-04-18 22:27:33,435 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0013659000396728516}
+2024-04-18 22:28:23,433 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0013720989227294922}
+2024-04-18 22:29:13,433 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0023233890533447266}
+2024-04-18 22:30:03,432 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.001344442367553711}
+2024-04-18 22:30:53,430 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0014503002166748047}
+2024-04-18 22:31:43,428 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0013344287872314453}
+2024-04-18 22:32:33,431 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.003839731216430664}
+2024-04-18 22:33:23,428 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.00220489501953125}
+2024-04-18 22:34:13,424 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0012862682342529297}
+2024-04-18 22:35:03,424 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.001226186752319336}
+2024-04-18 22:35:53,423 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.001379251480102539}
+2024-04-18 22:36:43,421 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0013589859008789062}
+2024-04-18 22:37:33,421 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0014190673828125}
+2024-04-18 22:38:23,419 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0013549327850341797}
+2024-04-18 22:39:13,417 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0013194084167480469}
+2024-04-18 22:40:03,418 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.00130462646484375}
+2024-04-18 22:40:53,416 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0015423297882080078}
+2024-04-18 22:41:43,414 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0014977455139160156}
+2024-04-18 22:42:33,413 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0014564990997314453}
+2024-04-18 22:43:23,411 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0012853145599365234}
+2024-04-18 22:44:13,409 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0013070106506347656}
+2024-04-18 22:45:03,407 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0017380714416503906}
+2024-04-18 22:45:53,407 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.001560211181640625}
+2024-04-18 22:46:43,405 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0014452934265136719}
+2024-04-18 22:47:33,405 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0013933181762695312}
+2024-04-18 22:48:23,403 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.001416921615600586}
+2024-04-18 22:49:13,401 - INFO - {'url': '/metrics', 'method': 'GET', 'process_time': 0.0013937950134277344}
