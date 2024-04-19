@@ -127,8 +127,8 @@ async def send_message(message_request: SendMessageRequest):
         return {"status": "success", "message": "Message sent"}
     except HTTPError as http_err:
         # Captura y manejo de errores relacionados con la solicitud HTTP.
-        logger.error(f"Failed to send message, status code: {http_err.response.status_code}")
-        raise HTTPException(status_code=http_err.response.status_code, detail="Failed to send message")
+        logger.error(f"Failed to send message {response.text} with status code: {http_err.response.status_code}")
+        raise HTTPException(status_code=http_err.response.status_code, detail=response.text)
     except Exception as err:
         # Manejo de cualquier otro tipo de error no capturado específicamente.
         logger.error(f"An unexpected error occurred while sending the message: {err}")
