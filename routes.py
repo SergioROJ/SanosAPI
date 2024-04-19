@@ -107,6 +107,7 @@ async def send_message(message_request: SendMessageRequest):
     logger.info(f"Sending message to recipient_number: {message_request.recipient_number}")
     
     try:
+        response = None
         # Envío de la solicitud POST a la API de WhatsApp.
         response = await AsyncHTTPClient.request(
             "POST",
@@ -124,7 +125,7 @@ async def send_message(message_request: SendMessageRequest):
 
         # Registro de éxito al enviar el mensaje.
         logger.info("Message sent successfully")
-        return {"status": "success", "message": "Message sent"}
+        return {"status": "success", "message": f"Message sent to {message_request.recipient_number}."}
     except HTTPError as http_err:
         # Captura y manejo de errores relacionados con la solicitud HTTP.
         logger.error(f"Failed to send message {response.text} with status code: {http_err.response.status_code}")
