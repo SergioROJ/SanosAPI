@@ -50,10 +50,11 @@ Este proyecto integra el envío y recepción de mensajes, imágenes, audio y vid
    Si se desea correr la aplicación en otros puertos, solo es necesario cambiar la línea donde se despliega el API mediante uvicorn en el Dockerfile:
 
    ```bash
-   CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5000"]```
-
+   CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5000"]
+   ```
    Por otro lado, también será necesario cambiar el puerto expuesto para Docker:
 
    ```bash
    EXPOSE 5000
+   ```
   
