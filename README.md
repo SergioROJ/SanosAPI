@@ -1,7 +1,7 @@
-# FastAPI WhatsApp Integration
+# FastAPI MOE Integration
 
 ## Introducción
-Este proyecto integra el envío y recepción de mensajes, imágenes, audio y videos a través de WhatsApp con una aplicación FastAPI. Utiliza la API de WhatsApp Business para procesar eventos entrantes de webhook y permite el manejo de medios y estrategias de respuesta.
+Este proyecto integra el envío y recepción de mensajes, imágenes, audio y videos a través de WhatsApp con una aplicación FastAPI. Utiliza la API de WhatsApp Business para procesar eventos entrantes de webhook y permite el manejo de medios y estrategias de respuesta. Adicionalmente, integra funcionalidades para envío de correos y publicaciones en Twitter.
 
 ## Setup
 1. **Clonar el repositorio:**
